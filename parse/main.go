@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/trobbi11/plantcyc-parse"
+	"github.com/trobbi11/plantcyc"
 )
 
 // PlantCyc Data Parser
