@@ -1,0 +1,137 @@
+# 
+#
+# Authors:
+#    Renato H. Orsi, Department of Food Science - Cornell University
+#    Teresa M. Bergholz, Department of Food Science - Cornell University
+#    Martin Wiedmann, Department of Food Science - Cornell University
+#    Kathryn J. Boor, Department of Food Science - Cornell University
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Listeria monocytogenes 10403S
+# Database: 10403s_RastCyc
+# Version: 1.0.2.1
+# File Name: transporters.col
+# Date and time generated: October 28, 2015, 13:22:11
+#
+UNIQUE-ID	NAME	REACTION-EQUATION	SUBUNIT-COMPOSITION
+LMRG_01752-MONOMER	Phosphate transport ATP-binding protein PstB (TC 3.A.1.7.1)	ATP + phosphate[extracellular space] + H2O  <-->  ADP + 2 phosphate[cytosol] + H+	1*LMRG_01752-MONOMER
+LMRG_02183-MONOMER	NADH dehydrogenase (EC 1.6.99.3) in cluster with putative pheromone precursor	4 H+[in]  <-->  4 H+[out]	1*LMRG_02183-MONOMER
+		NADP+ + NADH + H+[out]  <-->  NAD+ + NADPH + H+[in]	
+		K+[in]  <-->  K+[out]	
+LMRG_01454-MONOMER	Ammonium transporter	ammonium[extracellular space]  <-->  ammonium[cytosol]	1*LMRG_01454-MONOMER
+LMRG_00093-MONOMER	PTS system, fructose-specific, IIC component	fructose[extracellular space] + phosphoenolpyruvate  <-->  fructose[cytosol] + pyruvate	1*LMRG_00093-MONOMER
+CPLXAB3-11	predicted transporter complex of dihydroxyacetone	dihydroxyacetone[extracellular space] + phosphoenolpyruvate  <-->  dihydroxyacetone-6-phosphate[cytosol] + pyruvate	1*LMRG_00039-MONOMER,1*LMRG_00038-MONOMER
+LMRG_01350-MONOMER	FIG001733: aminoglycoside phosphotransferase family protein	an aminoglycoside[extracellular space] + phosphoenolpyruvate  <-->  an aminoglycoside[cytosol] + pyruvate	1*LMRG_01350-MONOMER
+LMRG_02453-MONOMER	PTS system, mannose/fructose/sorbose family, IID component	D-mannose[extracellular space] + phosphoenolpyruvate  <-->  D-mannose[cytosol] + pyruvate	1*LMRG_02453-MONOMER
+LMRG_01235-MONOMER	FIG008206: Aminoglycoside phosphotransferase	an aminoglycoside[extracellular space] + phosphoenolpyruvate  <-->  an aminoglycoside[cytosol] + pyruvate	1*LMRG_01235-MONOMER
+CPLXAB3-23	predicted transporter complex of a beta-glucoside	a beta-glucoside[extracellular space] + phosphoenolpyruvate  <-->  a beta-glucoside[cytosol] + pyruvate	1*LMRG_01914-MONOMER,1*LMRG_01917-MONOMER,1*LMRG_01915-MONOMER
+CPLXAB3-12	predicted transporter complex of dihydroxyacetone	dihydroxyacetone[extracellular space] + phosphoenolpyruvate  <-->  dihydroxyacetone-6-phosphate[cytosol] + pyruvate	1*LMRG_02000-MONOMER,1*LMRG_02002-MONOMER,1*LMRG_02001-MONOMER
+LMRG_00007-MONOMER	FIG001362: Cellobiose phosphotransferase system YdjC-like protein	cellobiose[extracellular space] + phosphoenolpyruvate  <-->  6-phospho-beta-D-glucosyl-(1,4)-D-glucose[cytosol] + pyruvate	1*LMRG_00007-MONOMER
+LMRG_02963-MONOMER	FIG001362: Cellobiose phosphotransferase system YdjC-like protein	cellobiose[extracellular space] + phosphoenolpyruvate  <-->  6-phospho-beta-D-glucosyl-(1,4)-D-glucose[cytosol] + pyruvate	1*LMRG_02963-MONOMER
+LMRG_02195-MONOMER	FIG006895: PTS system, lactose/cellobiose specific IIB subunit	lactose[extracellular space] + phosphoenolpyruvate  <-->  lactose 6-phosphate[cytosol] + pyruvate	1*LMRG_02195-MONOMER
+LMRG_02453-MONOMER	PTS system, mannose/fructose/sorbose family, IID component	fructose[extracellular space] + phosphoenolpyruvate  <-->  fructose[cytosol] + pyruvate	1*LMRG_02453-MONOMER
+LMRG_02456-MONOMER	FIG007563: PTS system, beta-glucoside-specific IIB component (EC 2.7.1.69) / PTS system, beta-glucoside-specific IIC component (EC 2.7.1.69) / PTS system, beta-glucoside-specific IIA component (EC 2.7.1.69)	sucrose[extracellular space] + a protein-Npi-phospho-L-histidine  <-->  a [protein]-L-histidine + sucrose-6-phosphate[cytosol]	1*LMRG_02456-MONOMER
+CPLXAB3-7	predicted transporter complex of D-mannose/Fructose/a sorbose	fructose[extracellular space] + phosphoenolpyruvate  <-->  fructose[cytosol] + pyruvate	1*LMRG_02452-MONOMER,1*LMRG_02451-MONOMER
+LMRG_00547-MONOMER	CDP-ribitol:poly(ribitol phosphate) ribitol phosphotransferase	CDP-ribitol[extracellular space] + phosphoenolpyruvate  <-->  CDP-ribitol-6-phosphate[cytosol] + pyruvate	1*LMRG_00547-MONOMER
+CPLXAB3-22	predicted transporter complex of a beta-glucoside	a beta-glucoside[extracellular space] + phosphoenolpyruvate  <-->  a beta-glucoside[cytosol] + pyruvate	1*LMRG_02300-MONOMER,1*LMRG_02298-MONOMER,1*LMRG_02299-MONOMER
+LMRG_01572-MONOMER	FIG008460: PTS system, beta-glucoside-specific, IIA component	a beta-glucoside[extracellular space] + phosphoenolpyruvate  <-->  a beta-glucoside[cytosol] + pyruvate	1*LMRG_01572-MONOMER
+LMRG_02195-MONOMER	FIG006895: PTS system, lactose/cellobiose specific IIB subunit	cellobiose[extracellular space] + phosphoenolpyruvate  <-->  6-phospho-beta-D-glucosyl-(1,4)-D-glucose[cytosol] + pyruvate	1*LMRG_02195-MONOMER
+CPLXAB3-7	predicted transporter complex of D-mannose/Fructose/a sorbose	D-mannose[extracellular space] + phosphoenolpyruvate  <-->  D-mannose[cytosol] + pyruvate	1*LMRG_02452-MONOMER,1*LMRG_02451-MONOMER
+LMRG_00120-MONOMER	PTS system, fructose-specific, IIC component	fructose[extracellular space] + phosphoenolpyruvate  <-->  fructose[cytosol] + pyruvate	1*LMRG_00120-MONOMER
+CPLXAB3-7	predicted transporter complex of D-mannose/Fructose/a sorbose	sorbose[extracellular space] + phosphoenolpyruvate  <-->  sorbose[cytosol] + pyruvate	1*LMRG_02452-MONOMER,1*LMRG_02451-MONOMER
+LMRG_02567-MONOMER	FIG172554: PTS system, beta-glucoside-specific, IIA component	a beta-glucoside[extracellular space] + phosphoenolpyruvate  <-->  a beta-glucoside[cytosol] + pyruvate	1*LMRG_02567-MONOMER
+LMRG_02456-MONOMER	FIG007563: PTS system, beta-glucoside-specific IIB component (EC 2.7.1.69) / PTS system, beta-glucoside-specific IIC component (EC 2.7.1.69) / PTS system, beta-glucoside-specific IIA component (EC 2.7.1.69)	a protein-Npi-phospho-L-histidine + a sugar  <-->  a [protein]-L-histidine + a sugar phosphate	1*LMRG_02456-MONOMER
+LMRG_02453-MONOMER	PTS system, mannose/fructose/sorbose family, IID component	sorbose[extracellular space] + phosphoenolpyruvate  <-->  sorbose[cytosol] + pyruvate	1*LMRG_02453-MONOMER
+LMRG_00042-MONOMER	FIG054739: Phosphoenolpyruvate-dihydroxyacetone phosphotransferase (EC 2.7.1.121), subunit DhaM; DHA-specific IIA component	dihydroxyacetone[extracellular space] + phosphoenolpyruvate  <-->  dihydroxyacetone-6-phosphate[cytosol] + pyruvate	1*LMRG_00042-MONOMER
+LMRG_00255-MONOMER	Xanthine/uracil/thiamine/ascorbate permease family protein	L-ascorbate[extracellular space] + H+[extracellular space]  <-->  L-ascorbate[cytosol] + H+[cytosol]	1*LMRG_00255-MONOMER
+LMRG_00332-MONOMER	FIG007286: amino acid permease family protein	a standard alpha amino acid[extracellular space] + H+[extracellular space]  <-->  a standard alpha amino acid[cytosol] + H+[cytosol]	1*LMRG_00332-MONOMER
+LMRG_00148-MONOMER	Cytosine/purine/uracil/thiamine/allantoin permease family protein	allantoin[extracellular space] + H+[extracellular space]  <-->  allantoin[cytosol] + H+[cytosol]	1*LMRG_00148-MONOMER
+LMRG_02251-MONOMER	Na/Pi cotransporter II-related protein	Na+[extracellular space] + phosphate[extracellular space]  <-->  Na+[cytosol] + phosphate[cytosol]	1*LMRG_02251-MONOMER
+LMRG_01649-MONOMER	Heme transporter IsdDEF, permease component IsdF	heme[cytosol] + H+[cytosol]  <-->  heme[extracellular space] + H+[extracellular space]	1*LMRG_01649-MONOMER
+LMRG_01431-MONOMER	Glycerol uptake facilitator protein	glycerol[extracellular space] + H+[extracellular space]  <-->  glycerol[cytosol] + H+[cytosol]	1*LMRG_01431-MONOMER
+LMRG_02421-MONOMER	Predicted L-rhamnose permease RhaY	L-rhamnose[extracellular space] + H+[extracellular space]  <-->  L-rhamnose[cytosol] + H+[cytosol]	1*LMRG_02421-MONOMER
+LMRG_00632-MONOMER	Ethanolamine permease	ethanolamine[extracellular space] + H+[extracellular space]  <-->  ethanolamine[cytosol] + H+[cytosol]	1*LMRG_00632-MONOMER
+LMRG_01751-MONOMER	Phosphate transport system permease protein PstA (TC 3.A.1.7.1)	phosphate[extracellular space] + H+[extracellular space]  <-->  phosphate[cytosol] + H+[cytosol]	1*LMRG_01751-MONOMER
+LMRG_00057-MONOMER	Ferrous iron transport permease EfeU	Fe2+[extracellular space] + H+[extracellular space]  <-->  Fe2+[cytosol] + H+[cytosol]	1*LMRG_00057-MONOMER
+LMRG_01661-MONOMER	FIG008145: Oxalate/formate antiporter	oxalate[extracellular space] + formate[cytosol]  <-->  oxalate[cytosol] + formate[extracellular space]	1*LMRG_01661-MONOMER
+LMRG_02868-MONOMER	Lysine-specific permease	L-lysine[extracellular space] + H+[extracellular space]  <-->  L-lysine[cytosol] + H+[cytosol]	1*LMRG_02868-MONOMER
+LMRG_00536-MONOMER	Teichoic acid translocation permease protein TagG	a teichoic acid[extracellular space] + H+[extracellular space]  <-->  a teichoic acid[cytosol] + H+[cytosol]	1*LMRG_00536-MONOMER
+LMRG_00255-MONOMER	Xanthine/uracil/thiamine/ascorbate permease family protein	thiamin[extracellular space] + H+[extracellular space]  <-->  thiamin[cytosol] + H+[cytosol]	1*LMRG_00255-MONOMER
+LMRG_02385-MONOMER	FIG003336: Oligopeptide transport system permease protein oppB (TC 3.A.1.5.1)	an oligopeptide[extracellular space] + H+[extracellular space]  <-->  an oligopeptide[cytosol] + H+[cytosol]	1*LMRG_02385-MONOMER
+LMRG_02466-MONOMER	Agmatine/putrescine antiporter, associated with agmatine catabolism	agmatine[extracellular space] + putrescine[cytosol]  <-->  agmatine[cytosol] + putrescine[extracellular space]	1*LMRG_02466-MONOMER
+LMRG_00237-MONOMER	Di/tripeptide permease DtpT	a tripeptide[extracellular space] + H+[extracellular space]  <-->  a tripeptide[cytosol] + H+[cytosol]	1*LMRG_00237-MONOMER
+LMRG_02705-MONOMER	4-oxalocrotonate tautomerase (EC 5.3.2.-); Xylose transport system permease protein xylH	4-oxalocrotonate[extracellular space] + H+[extracellular space]  <-->  4-oxalocrotonate[cytosol] + H+[cytosol]	1*LMRG_02705-MONOMER
+LMRG_01480-MONOMER	Probable glutamate/gamma-aminobutyrate antiporter	4-aminobutanoate[cytosol] + L-glutamate[extracellular space]  <-->  L-glutamate[cytosol] + 4-aminobutanoate[extracellular space]	1*LMRG_01480-MONOMER
+LMRG_00986-MONOMER	Uracil permease	uracil[extracellular space] + H+[extracellular space]  <-->  uracil[cytosol] + H+[cytosol]	1*LMRG_00986-MONOMER
+LMRG_00148-MONOMER	Cytosine/purine/uracil/thiamine/allantoin permease family protein	cytosine[extracellular space] + H+[extracellular space]  <-->  cytosine[cytosol] + H+[cytosol]	1*LMRG_00148-MONOMER
+LMRG_00992-MONOMER	FIG007973: xanthine/uracil permease family protein	xanthine[extracellular space] + uracil[extracellular space]  <-->  xanthine[cytosol] + uracil[cytosol]	1*LMRG_00992-MONOMER
+LMRG_00148-MONOMER	Cytosine/purine/uracil/thiamine/allantoin permease family protein	a purine[extracellular space] + H+[extracellular space]  <-->  a purine[cytosol] + H+[cytosol]	1*LMRG_00148-MONOMER
+LMRG_02321-MONOMER	FIG005216: Sulfate permease	sulfate[extracellular space] + H+[extracellular space]  <-->  sulfate[cytosol] + H+[cytosol]	1*LMRG_02321-MONOMER
+LMRG_00176-MONOMER	FIG002576: Permease of the drug/metabolite transporter (DMT) superfamily	3,5-dimethoxytoluene[extracellular space] + H+[extracellular space]  <-->  3,5-dimethoxytoluene[cytosol] + H+[cytosol]	1*LMRG_00176-MONOMER
+LMRG_00501-MONOMER	FIG002718: Molybdenum transport system permease protein ModB (TC 3.A.1.8.1)	Mo2+[extracellular space] + H+[extracellular space]  <-->  Mo2+[cytosol] + H+[cytosol]	1*LMRG_00501-MONOMER
+LMRG_02510-MONOMER	sodium-dependent transporter	Na+[cytosol] + H+[cytosol]  <-->  Na+[extracellular space] + H+[extracellular space]	1*LMRG_02510-MONOMER
+LMRG_00255-MONOMER	Xanthine/uracil/thiamine/ascorbate permease family protein	xanthine[extracellular space] + H+[extracellular space]  <-->  xanthine[cytosol] + H+[cytosol]	1*LMRG_00255-MONOMER
+LMRG_00526-MONOMER	FIG008845: Magnesium and cobalt transport protein corA	Co2+[extracellular space]  <-->  Co2+[cytosol]	1*LMRG_00526-MONOMER
+LMRG_00475-MONOMER	D-serine/D-alanine/glycine transporter	D-alanine[extracellular space]  <-->  D-alanine[cytosol]	1*LMRG_00475-MONOMER
+LMRG_01243-MONOMER	Glycine betaine transporter OpuD	glycine betaine[extracellular space]  <-->  glycine betaine[cytosol]	1*LMRG_01243-MONOMER
+LMRG_02261-MONOMER	Hexose phosphate transporter	a sugar phosphate[extracellular space]  <-->  a sugar phosphate[cytosol]	1*LMRG_02261-MONOMER
+LMRG_00876-MONOMER	FIG012160: Manganese transport protein MntH	Mn2+[extracellular space]  <-->  Mn2+[cytosol]	1*LMRG_00876-MONOMER
+LMRG_02046-MONOMER	FIG010014: Cyanate permease	cyanate[extracellular space] + H+[extracellular space]  <-->  cyanate[cytosol] + H+[cytosol]	1*LMRG_02046-MONOMER
+LMRG_00881-MONOMER	FIG011622: Substrate-specific component ThiT of thiamin ECF transporter	thiamin[extracellular space]  <-->  thiamin[cytosol]	1*LMRG_00881-MONOMER
+LMRG_00475-MONOMER	D-serine/D-alanine/glycine transporter	D-serine[extracellular space]  <-->  D-serine[cytosol]	1*LMRG_00475-MONOMER
+LMRG_00116-MONOMER	FIG013146: sugar transporter	a sugar[extracellular space]  <-->  a sugar[cytosol]	1*LMRG_00116-MONOMER
+LMRG_01257-MONOMER	FIG009252: ferrous iron transport protein A	Fe2+[extracellular space]  <-->  Fe2+[cytosol]	1*LMRG_01257-MONOMER
+LMRG_01648-MONOMER	Heme transporter IsdDEF, lipoprotein IsdE	heme[extracellular space]  <-->  heme[cytosol]	1*LMRG_01648-MONOMER
+LMRG_01945-MONOMER	FIG017059: Lipid A export ATP-binding/permease protein MsbA	ATP[cytosol]  <-->  ATP[extracellular space]	1*LMRG_01945-MONOMER
+LMRG_01582-MONOMER	FIG009601: Probable low-affinity inorganic phosphate transporter	phosphate[cytosol]  <-->  phosphate[extracellular space]	1*LMRG_01582-MONOMER
+LMRG_00475-MONOMER	D-serine/D-alanine/glycine transporter	glycine[extracellular space]  <-->  glycine[cytosol]	1*LMRG_00475-MONOMER
+LMRG_00636-MONOMER	Substrate-specific component CblT of predicted B12-regulated ECF transporter for dimethylbenzimidazole	5,6-dimethylbenzimidazole[cytosol]  <-->  5,6-dimethylbenzimidazole[extracellular space]	1*LMRG_00636-MONOMER
+LMRG_01601-MONOMER	cation efflux protein	a cation[cytosol]  <-->  a cation[extracellular space]	1*LMRG_01601-MONOMER
+LMRG_00281-MONOMER	Substrate-specific component BioY of biotin ECF transporter	biotin[extracellular space]  <-->  biotin[cytosol]	1*LMRG_00281-MONOMER
+LMRG_02414-MONOMER	glucose uptake protein	D-glucose[extracellular space]  <-->  D-glucose[cytosol]	1*LMRG_02414-MONOMER
+LMRG_00550-MONOMER	CDP-glycerol: glycerophosphate glycerophosphotransferase	CDP-glycerol[extracellular space]  <-->  CDP-glycerol[cytosol]	1*LMRG_00550-MONOMER
+LMRG_02685-MONOMER	Sensor histidine kinase colocalized with HrtAB transporter	L-histidine[extracellular space]  <-->  L-histidine[cytosol]	1*LMRG_02685-MONOMER
+LMRG_01092-MONOMER	Substrate-specific component RibU of riboflavin ECF transporter	riboflavin[extracellular space]  <-->  riboflavin[cytosol]	1*LMRG_01092-MONOMER
+LMRG_00205-MONOMER	sulfate transporter family protein	sulfate[extracellular space]  <-->  sulfate[cytosol]	1*LMRG_00205-MONOMER
+LMRG_02093-MONOMER	Potassium uptake protein, integral membrane component, KtrD	K+[extracellular space]  <-->  K+[cytosol]	1*LMRG_02093-MONOMER
+LMRG_02732-MONOMER	Putative chloride channel protein	chloride[extracellular space]  <-->  chloride[cytosol]	1*LMRG_02732-MONOMER
+LMRG_02012-MONOMER	FIG010675: Formate efflux transporter (TC 2.A.44 family)	formate[cytosol]  <-->  formate[extracellular space]	1*LMRG_02012-MONOMER
+LMRG_00275-MONOMER	formate/nitrite transporter family protein	nitrite[extracellular space]  <-->  nitrite[cytosol]	1*LMRG_00275-MONOMER
+LMRG_00526-MONOMER	FIG008845: Magnesium and cobalt transport protein corA	Mg2+[extracellular space]  <-->  Mg2+[cytosol]	1*LMRG_00526-MONOMER
+LMRG_02687-MONOMER	Heme efflux system ATPase HrtA	heme[cytosol] + ATP + H2O  <-->  heme[extracellular space] + ADP + phosphate	1*LMRG_02687-MONOMER
+CPLXAB3-13	predicted ATP-driven transporter complex of K+	K+[extracellular space] + ATP + H2O  <-->  K+[cytosol] + ADP + phosphate	1*LMRG_02226-MONOMER,1*LMRG_02225-MONOMER,1*LMRG_02227-MONOMER
+CPLXAB3-3	predicted ATP-driven transporter complex of spermidine/putrescine	ATP + spermidine[extracellular space] + H2O  <-->  ADP + spermidine[cytosol] + phosphate	1*LMRG_02790-MONOMER,1*LMRG_02789-MONOMER,1*LMRG_02788-MONOMER
+LMRG_02271-MONOMER	Glutamate transport ATP-binding protein	ATP + L-glutamate[extracellular space] + H2O  <-->  ADP + L-glutamate[cytosol] + phosphate	1*LMRG_02271-MONOMER
+LMRG_01650-MONOMER	Heme transporter analogous to IsdDEF, ATP-binding protein	heme[extracellular space] + ATP + H2O  <-->  heme[cytosol] + ADP + phosphate	1*LMRG_01650-MONOMER
+CPLXAB3-10	predicted ATP-driven transporter complex of maltose/a maltodextrin	a maltodextrin[extracellular space] + ATP + H2O  <-->  a maltodextrin[cytosol] + ADP + phosphate	1*LMRG_01277-MONOMER,1*LMRG_01278-MONOMER
+CPLXAB3-21	predicted ATP-driven transporter complex of CARNITINE/choline	L-carnitine[extracellular space] + ATP + H2O  <-->  L-carnitine[cytosol] + ADP + phosphate	1*LMRG_00877-MONOMER,1*LMRG_00880-MONOMER,1*LMRG_00878-MONOMER,1*LMRG_00879-MONOMER
+CPLXAB3-6	predicted ATP-driven transporter complex of CYSTINE	L-cystine[extracellular space] + ATP + H2O  <-->  L-cystine[cytosol] + ADP + phosphate	1*LMRG_01495-MONOMER,1*LMRG_01496-MONOMER,1*LMRG_01498-MONOMER,1*LMRG_01494-MONOMER,1*LMRG_01497-MONOMER
+CPLXAB3-19	predicted ATP-driven transporter complex of a monosaccharide	a monosaccharide[extracellular space] + ATP + H2O  <-->  a monosaccharide[cytosol] + ADP + phosphate	1*LMRG_00841-MONOMER,1*LMRG_00843-MONOMER
+CPLXAB3-24	predicted ATP-driven transporter complex of MN+2	Mn2+[extracellular space] + ATP + H2O  <-->  Mn2+[cytosol] + ADP + phosphate	1*LMRG_00994-MONOMER,1*LMRG_00995-MONOMER,1*LMRG_00996-MONOMER
+LMRG_00653-MONOMER	ATPase component CbiO of energizing module of cobalt ECF transporter	Co2+[extracellular space] + ATP + H2O  <-->  Co2+[cytosol] + ADP + phosphate	1*LMRG_00653-MONOMER
+CPLXAB3-3	predicted ATP-driven transporter complex of spermidine/putrescine	ATP + putrescine[extracellular space] + H2O  <-->  ADP + putrescine[cytosol] + phosphate	1*LMRG_02790-MONOMER,1*LMRG_02789-MONOMER,1*LMRG_02788-MONOMER
+CPLXAB3-20	predicted ATP-driven transporter complex of Fe3+/a siderophore	a siderophore[extracellular space] + ATP + H2O  <-->  a siderophore[cytosol] + ADP + phosphate	1*LMRG_01104-MONOMER,1*LMRG_01105-MONOMER
+LMRG_01107-MONOMER	Ferrichrome transport ATP-binding protein FhuC (TC 3.A.1.14.3)	ferrichrome[extracellular space] + ATP + H2O  <-->  ferrichrome[cytosol] + ADP + phosphate	1*LMRG_01107-MONOMER
+CPLXAB3-4	predicted ATP-driven transporter complex of multidrug	multidrug[extracellular space] + ATP + H2O  <-->  multidrug[cytosol] + ADP + phosphate	1*LMRG_00291-MONOMER,1*LMRG_00290-MONOMER
+CPLXAB3-10	predicted ATP-driven transporter complex of maltose/a maltodextrin	maltose[extracellular space] + ATP + H2O  <-->  maltose[cytosol] + ADP + phosphate	1*LMRG_01277-MONOMER,1*LMRG_01278-MONOMER
+LMRG_01712-MONOMER	ATP synthase protein I	ATP + 3 H+[out] + H2O  <-->  ADP + phosphate + 4 H+[cytosol]	1*LMRG_01712-MONOMER
+CPLXAB3-17	predicted ATP-driven transporter complex of a standard alpha amino acid	a standard alpha amino acid[extracellular space] + ATP + H2O  <-->  a standard alpha amino acid[cytosol] + ADP + phosphate	1*LMRG_01580-MONOMER,1*LMRG_01581-MONOMER
+CPLXAB3-15	predicted ATP-driven transporter complex of L-methionine	ATP + L-methionine[extracellular space] + H2O  <-->  ADP + L-methionine[cytosol] + phosphate	1*LMRG_02588-MONOMER,1*LMRG_02586-MONOMER,1*LMRG_02587-MONOMER
+LMRG_02264-MONOMER	Calcium-transporting ATPase	Ca2+[out] + ATP + H2O  <-->  Ca2+[in] + ADP + phosphate + H+	1*LMRG_02264-MONOMER
+CPLXAB3-8	predicted ATP-driven transporter complex of Zn2+	Zn2+[extracellular space] + ATP + H2O  <-->  Zn2+[cytosol] + ADP + phosphate	1*LMRG_00898-MONOMER,1*LMRG_00899-MONOMER
+CPLXAB3-5	predicted ATP-driven transporter complex of glycine betaine	glycine betaine[extracellular space] + ATP + H2O  <-->  glycine betaine[cytosol] + ADP + phosphate	1*LMRG_02115-MONOMER,1*LMRG_02116-MONOMER
+LMRG_00537-MONOMER	Teichoic acid export ATP-binding protein TagH (EC 3.6.3.40)	a teichoic acid[cytosol] + ATP + H2O  <-->  a teichoic acid[cell wall] + ADP + phosphate	1*LMRG_00537-MONOMER
+CPLXAB3-21	predicted ATP-driven transporter complex of CARNITINE/choline	choline[extracellular space] + ATP + H2O  <-->  choline[cytosol] + ADP + phosphate	1*LMRG_00877-MONOMER,1*LMRG_00880-MONOMER,1*LMRG_00878-MONOMER,1*LMRG_00879-MONOMER
+LMRG_00502-MONOMER	FIG021644: Molybdenum ABC transporter, periplasmic molybdenum-binding protein ModA (TC 3.A.1.8.1)	Mo2+[extracellular space] + ATP + H2O  <-->  Mo2+[cytosol] + ADP + phosphate	1*LMRG_00502-MONOMER
+CPLXAB3-20	predicted ATP-driven transporter complex of Fe3+/a siderophore	Fe3+[extracellular space] + ATP + H2O  <-->  Fe3+[cytosol] + ADP + phosphate	1*LMRG_01104-MONOMER,1*LMRG_01105-MONOMER
+LMRG_02235-MONOMER	FIG009233: Mg(2+) transport ATPase, P-type (EC 3.6.3.2)	Mg2+[extracellular space] + ATP + H2O  <-->  Mg2+[cytosol] + ADP + phosphate + H+	1*LMRG_02235-MONOMER
+LMRG_02114-MONOMER	Glycine betaine ABC transport system, ATP-binding protein OpuAA (EC 3.6.3.32)	a quaternary amine[extracellular space] + ATP + H2O  <-->  a quaternary amine[cytosol] + ADP + phosphate + H+	1*LMRG_02114-MONOMER
+CPLXAB3-26	predicted ATP-driven transporter complex of an oligopeptide	an oligopeptide[extracellular space] + ATP + H2O  <-->  an oligopeptide[cytosol] + ADP + phosphate	1*LMRG_01640-MONOMER,1*LMRG_01639-MONOMER
+LMRG_01000-MONOMER	Copper-translocating P1-type ATPase	Cu2+[cytosol] + ATP + H2O  <-->  Cu2+[extracellular space] + ADP + phosphate + H+	1*LMRG_01000-MONOMER
+LMRG_02264-MONOMER	Calcium-transporting ATPase	a cation[extracellular space] + ATP + H2O  <-->  a cation[cytosol] + ADP + phosphate	1*LMRG_02264-MONOMER
+LMRG_02531-MONOMER	FIG005035: ABC transporter membrane-spanning permease - glutamine transport	ATP + L-glutamine[extracellular space] + H2O  <-->  ADP + L-glutamine[cytosol] + phosphate	1*LMRG_02531-MONOMER
+CPLXAB3-14	predicted ATP-driven transporter complex of CPD-12541	N-acetyl-alpha-D-glucosamine[extracellular space] + ATP + H2O  <-->  N-acetyl-alpha-D-glucosamine[cytosol] + ADP + phosphate	1*LMRG_02744-MONOMER,1*LMRG_02745-MONOMER,1*LMRG_02746-MONOMER
+CPLXAB3-25	predicted ATP-driven transporter complex of a sugar	a sugar[extracellular space] + ATP + H2O  <-->  a sugar[cytosol] + ADP + phosphate	1*LMRG_02284-MONOMER,1*LMRG_02282-MONOMER,1*LMRG_02283-MONOMER
+LMRG_00535-MONOMER	FIG016684: Vitamin B12 ABC transporter, B12-binding component BtuF	ATP + cob(I)alamin[extracellular space] + H2O  <-->  ADP + cob(I)alamin[cytosol] + phosphate	1*LMRG_00535-MONOMER

@@ -1,0 +1,111 @@
+10403s_RastCyc	LMRG_02097-MONOMER	ClpE		GO:0006950	PMID:9987121	EXP		P	ATP-dependent Clp protease, ATP-binding subunit ClpE	clpE|lmo0997	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_01788-MONOMER	CggR		GO:0045820	PMID:12622823	IDA		P	Central glycolytic genes regulator	cggR|lmo2460	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_01788-MONOMER	CggR		GO:0043565	PMID:12622823	IDA		F	Central glycolytic genes regulator	cggR|lmo2460	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_00926-MONOMER	DnaK		GO:0009408	PMID:10547061	IMP		P	Chaperone protein DnaK	dnaK|lmo1473	protein	taxon:393133	20130108	10403s_RastCyc
+10403s_RastCyc	LMRG_01169-MONOMER	DivIVA		GO:0007049	PMID:22353466	IMP		P	Cell division initiation protein DivIVA	divIVA|lmo2020	protein	taxon:393133	20120223	10403s_RastCyc
+10403s_RastCyc	LMRG_01169-MONOMER	DivIVA		GO:0051301	PMID:22353466	IMP		P	Cell division initiation protein DivIVA	divIVA|lmo2020	protein	taxon:393133	20120223	10403s_RastCyc
+10403s_RastCyc	LMRG_01789-MONOMER	Gap		GO:0009405	PMID:19478867	IMP		P	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase/ADP-ribosyltransferase	gap|lmo2459	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_01789-MONOMER	Gap		GO:0005618	PMID:18088303	IDA		C	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase/ADP-ribosyltransferase	gap|lmo2459	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_01789-MONOMER	Gap		GO:0005576	PMID:18088303	IDA		C	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase/ADP-ribosyltransferase	gap|lmo2459	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_01789-MONOMER	Gap		GO:0051287	PMID:18088303	IDA		F	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase/ADP-ribosyltransferase	gap|lmo2459	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_01789-MONOMER	Gap		GO:0006471	PMID:18088303	IDA		P	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase/ADP-ribosyltransferase	gap|lmo2459	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_01789-MONOMER	Gap		GO:0004365	PMID:18088303	RCA		F	NAD-dependent glyceraldehyde-3-phosphate dehydrogenase/ADP-ribosyltransferase	gap|lmo2459	protein	taxon:393133	20121025	10403s_RastCyc
+10403s_RastCyc	LMRG_00741-MONOMER	OatA		GO:0009405	PMID:21844299	IMP		P	peptidoglycan O-acetyltransferase	oatA|lmo1291	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_00741-MONOMER	OatA		GO:0046677	PMID:21844299	IMP		P	peptidoglycan O-acetyltransferase	oatA|lmo1291	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_02632-MONOMER	Ldh		GO:0004459	PMID:18403036	IMP		F	L-lactate dehydrogenase	ldh|lmo0210	protein	taxon:393133	20110815	10403s_RastCyc
+10403s_RastCyc	LMRG_02677-MONOMER	CtsR		GO:0006351	PMID:10692157	EXP		P	transcriptional regulator CtsR	ctsR|lmo0229	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_02677-MONOMER	CtsR		GO:0006355	PMID:10692157	EXP		P	transcriptional regulator CtsR	ctsR|lmo0229	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_02677-MONOMER	CtsR		GO:0045892	PMID:17933929	IEP		P	transcriptional regulator CtsR	ctsR|lmo0229	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_02677-MONOMER	CtsR		GO:0006950	PMID:17933929	IMP		P	transcriptional regulator CtsR	ctsR|lmo0229	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_02677-MONOMER	CtsR		GO:0003677	PMID:10692157	EXP		F	transcriptional regulator CtsR	ctsR|lmo0229	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_02441-MONOMER	Pmk		GO:0004631	PMID:15013758	NR		F	Phosphomevalonate kinase	pmk|lmo0012	protein	taxon:393133	20101019	10403s_RastCyc
+10403s_RastCyc	LMRG_00928-MONOMER	HrcA		GO:0005737	PMID:17965207	ISO		C	Heat-inducible transcription repressor HrcA	hrcA|lmo1475	protein	taxon:393133	20130108	10403s_RastCyc
+10403s_RastCyc	LMRG_00928-MONOMER	HrcA		GO:0009408	PMID:17965207	ISO		P	Heat-inducible transcription repressor HrcA	hrcA|lmo1475	protein	taxon:393133	20130108	10403s_RastCyc
+10403s_RastCyc	LMRG_00928-MONOMER	HrcA		GO:0045892	PMID:17965207	ISO		P	Heat-inducible transcription repressor HrcA	hrcA|lmo1475	protein	taxon:393133	20130108	10403s_RastCyc
+10403s_RastCyc	LMRG_00928-MONOMER	HrcA		GO:0003700	PMID:17965207	ISO		F	Heat-inducible transcription repressor HrcA	hrcA|lmo1475	protein	taxon:393133	20130108	10403s_RastCyc
+10403s_RastCyc	LMRG_01325-MONOMER	CitB		GO:0006099	PMID:16352834	ISO		P	Aconitate hydratase	citB|lmo1641	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_01325-MONOMER	CitB		GO:0003994	PMID:16352834	ISO		F	Aconitate hydratase	citB|lmo1641	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_00740-MONOMER	InlK		GO:0009405	PMID:21829365	IMP		P	Internalin K	inlK|lmo1290	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_00740-MONOMER	InlK		GO:0005618	PMID:21829365	EXP		C	Internalin K	inlK|lmo1290	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_00327-MONOMER	FrvA		GO:0015408	PMID:22363518	IMP		F	Haem-transporting ATPase	frvA|lmo0641	protein	taxon:393133	20121101	10403s_RastCyc
+10403s_RastCyc	LMRG_00327-MONOMER	FrvA		GO:0009405	PMID:23105022	IMP		P	Haem-transporting ATPase	frvA|lmo0641	protein	taxon:393133	20121101	10403s_RastCyc
+10403s_RastCyc	LMRG_00327-MONOMER	FrvA		GO:0055072	PMID:22363518	IMP		P	Haem-transporting ATPase	frvA|lmo0641	protein	taxon:393133	20121101	10403s_RastCyc
+10403s_RastCyc	LMRG_02264-MONOMER	LMCA1		GO:0006816	PMID:21047776	IDA		P	Calcium-transporting ATPase	lmcA1|lmo0841	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02264-MONOMER	LMCA1		GO:0055074	PMID:21047776	IDA		P	Calcium-transporting ATPase	lmcA1|lmo0841	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02013-MONOMER	GabD		GO:0055114	PMID:23064337	IDA		P	Succinate-semialdehyde dehydrogenase	gabD|lmo0913	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02013-MONOMER	GabD		GO:0016620	PMID:23064337	IDA		F	Succinate-semialdehyde dehydrogenase	gabD|lmo0913	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02013-MONOMER	GabD		GO:0016491	PMID:23064337	IDA		F	Succinate-semialdehyde dehydrogenase	gabD|lmo0913	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02013-MONOMER	GabD		GO:0008152	PMID:23064337	IDA		P	Succinate-semialdehyde dehydrogenase	gabD|lmo0913	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02013-MONOMER	GabD		GO:0009013	PMID:23064337	IDA		F	Succinate-semialdehyde dehydrogenase	gabD|lmo0913	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_00723-MONOMER	RnhB		GO:0004518	PMID:19246760	ISS		F	Ribonuclease HII	rnhB|lmo1273	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00723-MONOMER	RnhB		GO:0004519	PMID:19246760	ISS		F	Ribonuclease HII	rnhB|lmo1273	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00723-MONOMER	RnhB		GO:0003676	PMID:19246760	ISS		F	Ribonuclease HII	rnhB|lmo1273	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00723-MONOMER	RnhB		GO:0003723	PMID:19246760	ISS		F	Ribonuclease HII	rnhB|lmo1273	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00723-MONOMER	RnhB		GO:0016787	PMID:19246760	ISS		F	Ribonuclease HII	rnhB|lmo1273	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00723-MONOMER	RnhB		GO:0004523	PMID:19246760	ISS		F	Ribonuclease HII	rnhB|lmo1273	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00378-MONOMER	FlaA		GO:0009405	PMID:16982842	EXP		P	Flagellin protein FlaA	flaA	protein	taxon:393133	20121019	10403s_RastCyc
+10403s_RastCyc	LMRG_00538-MONOMER	Aut		GO:0009405	PMID:15009888	IMP		P	N-acetylglucosaminidase	aut|lmo1076	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_00538-MONOMER	Aut		GO:0001896	PMID:19210622	IDA		P	N-acetylglucosaminidase	aut|lmo1076	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_00538-MONOMER	Aut		GO:0004553	PMID:19210622	IDA		F	N-acetylglucosaminidase	aut|lmo1076	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_00976-MONOMER	FbpA		GO:0009405	PMID:15228540	IMP		P	Fibronectin-binding protein	fbpA|lmo1829	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_00976-MONOMER	FbpA		GO:0005618	PMID:15228540	EXP		C	Fibronectin-binding protein	fbpA|lmo1829	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_00139-MONOMER	GadD1		GO:0004351	PMID:11309128	IDA		F	Glutamate decarboxylase	gadD1|gadA|lmo0447	protein	taxon:393133	20101102	10403s_RastCyc
+10403s_RastCyc	LMRG_02261-MONOMER	Hpt		GO:0015712	PMID:11756655	IMP		P	Hexose phosphate transporter	hpt|uhpT|lmo0837	protein	taxon:393133	20120308	10403s_RastCyc
+10403s_RastCyc	LMRG_02261-MONOMER	Hpt		GO:0015119	PMID:11756655	IMP		F	Hexose phosphate transporter	hpt|uhpT|lmo0837	protein	taxon:393133	20120308	10403s_RastCyc
+10403s_RastCyc	LMRG_02261-MONOMER	Hpt		GO:0005215	PMID:11756655	IMP		F	Hexose phosphate transporter	hpt|uhpT|lmo0837	protein	taxon:393133	20120308	10403s_RastCyc
+10403s_RastCyc	LMRG_02526-MONOMER	VirR		GO:0009405	PMID:16102006	IMP		P	Two-component system response regulator VirR	virR|lmo1745	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02526-MONOMER	VirR		GO:0000160	PMID:16102006	IMP		P	Two-component system response regulator VirR	virR|lmo1745	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02526-MONOMER	VirR		GO:0000156	PMID:16102006	IMP		F	Two-component system response regulator VirR	virR|lmo1745	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_01850-MONOMER	LtrC		GO:0006950	PMID:7926683	IMP		P	Low temperature requirement C protein	ltrC|lmo2398	protein	taxon:393133	20110831	10403s_RastCyc
+10403s_RastCyc	LMRG_01850-MONOMER	LtrC		GO:0009409	PMID:7926683	IMP		P	Low temperature requirement C protein	ltrC|lmo2398	protein	taxon:393133	20110831	10403s_RastCyc
+10403s_RastCyc	LMRG_02384-MONOMER	CtaP		GO:0009405	PMID:19818015	IMP		P	Cysteine transport associated protein	ctaP|lmo0135	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_02384-MONOMER	CtaP		GO:0043090	PMID:19818015	IMP		P	Cysteine transport associated protein	ctaP|lmo0135	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_02384-MONOMER	CtaP		GO:0016020	PMID:19818015	RCA		C	Cysteine transport associated protein	ctaP|lmo0135	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_02384-MONOMER	CtaP		GO:0005215	PMID:19818015	IMP		F	Cysteine transport associated protein	ctaP|lmo0135	protein	taxon:393133	20121024	10403s_RastCyc
+10403s_RastCyc	LMRG_01379-MONOMER	ArgD		GO:0016740	PMID:23064337	IMP		F	Acetylornithine aminotransferase/GABA aminotransferase	argD|lmo1588	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_01379-MONOMER	ArgD		GO:0003867	PMID:23064337	IMP		F	Acetylornithine aminotransferase/GABA aminotransferase	argD|lmo1588	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_01379-MONOMER	ArgD		GO:0009448	PMID:23064337	IMP		P	Acetylornithine aminotransferase/GABA aminotransferase	argD|lmo1588	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02433-MONOMER	RecF		GO:0006302	PMID:15186413	IMP		P	DNA recombination and repair protein RecF	recF|lmo0005	protein	taxon:393133	20101018	10403s_RastCyc
+10403s_RastCyc	LMRG_02433-MONOMER	RecF		GO:0043590	PMID:15186413	IDA		C	DNA recombination and repair protein RecF	recF|lmo0005	protein	taxon:393133	20101018	10403s_RastCyc
+10403s_RastCyc	LMRG_00130-MONOMER	LntA		GO:0009405	PMID:21252314	IMP		P	Listeria nuclear targeted protein A	lntA|lmo0438	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_00130-MONOMER	LntA		GO:0020012	PMID:21252314	IMP		P	Listeria nuclear targeted protein A	lntA|lmo0438	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_02769-MONOMER	MprF		GO:0009405	PMID:17042784	IMP		P	Phosphatidylglycerol lysyltransferase	mprF|lmo1695	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02769-MONOMER	MprF		GO:0050071	PMID:17042784	IMP		F	Phosphatidylglycerol lysyltransferase	mprF|lmo1695	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02110-MONOMER	CcpC		GO:0006355	PMID:23139400	IDA		P	transcriptional regulator, LysR family	ccpC|lmo1010	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_02110-MONOMER	CcpC		GO:0045892	PMID:23139400	IDA		P	transcriptional regulator, LysR family	ccpC|lmo1010	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_02110-MONOMER	CcpC		GO:0045893	PMID:23139400	IDA		P	transcriptional regulator, LysR family	ccpC|lmo1010	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_02110-MONOMER	CcpC		GO:0006101	PMID:19011028	IDA		P	transcriptional regulator, LysR family	ccpC|lmo1010	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_02110-MONOMER	CcpC		GO:0006099	PMID:19011028	IDA		P	transcriptional regulator, LysR family	ccpC|lmo1010	protein	taxon:393133	20121114	10403s_RastCyc
+10403s_RastCyc	LMRG_01698-MONOMER	GtcA		GO:0009405	PMID:18991548	IMP		P	cell wall teichoic acid glycosylation protein GtcA	gtcA|lmo2549	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_00107-MONOMER	PgdA		GO:0009405	PMID:17215377	IMP		P	Peptidoglycan N-acetylglucosamine deacetylase	pgdA|lmo0415	protein	taxon:393133	20121019	10403s_RastCyc
+10403s_RastCyc	LMRG_00107-MONOMER	PgdA		GO:0009252	PMID:17215377	IMP		P	Peptidoglycan N-acetylglucosamine deacetylase	pgdA|lmo0415	protein	taxon:393133	20121019	10403s_RastCyc
+10403s_RastCyc	LMRG_01301-MONOMER	LapB		GO:0044406	PMID:20617901	IMP		P	Listeria adhesion protein B	lapB|lmo1666	protein	taxon:393133	20101022	10403s_RastCyc
+10403s_RastCyc	LMRG_01301-MONOMER	LapB		GO:0009405	PMID:20617901	IMP		P	Listeria adhesion protein B	lapB|lmo1666	protein	taxon:393133	20101022	10403s_RastCyc
+10403s_RastCyc	LMRG_01877-MONOMER	InlJ		GO:0009405	PMID:16177371	IMP		P	Internalin J	inlJ|lmo2821	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_02073-MONOMER	DltA		GO:0009405	PMID:11849532	IMP		P	D-alanine-D-alanyl carrier protein ligase	dltA|lmo0974	protein	taxon:393133	20121019	10403s_RastCyc
+10403s_RastCyc	LMRG_02465-MONOMER	ArcB		GO:0019546	PMID:21835877	IMP		P	Putrescine and ornithine carbamoyltransferase	arcB|lmo0036	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_02465-MONOMER	ArcB		GO:0009405	PMID:21835877	IMP		P	Putrescine and ornithine carbamoyltransferase	arcB|lmo0036	protein	taxon:393133	20121026	10403s_RastCyc
+10403s_RastCyc	LMRG_00721-MONOMER	SipZ		GO:0005787	PMID:14982622	IMP		C	Signal peptidase I	sipZ|lmo1271	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_00721-MONOMER	SipZ		GO:0008233	PMID:14982622	IMP		F	Signal peptidase I	sipZ|lmo1271	protein	taxon:393133	20101027	10403s_RastCyc
+10403s_RastCyc	LMRG_01001-MONOMER	CsoR		GO:0016564	PMID:21564342	IDA		ERROR	copper-responsive repressor CsoR	csoR|lmo1854	protein	taxon:393133	20110516	10403s_RastCyc
+10403s_RastCyc	LMRG_01001-MONOMER	CsoR		GO:0003700	PMID:21564342	IDA		F	copper-responsive repressor CsoR	csoR|lmo1854	protein	taxon:393133	20110516	10403s_RastCyc
+10403s_RastCyc	LMRG_01001-MONOMER	CsoR		GO:0030528	PMID:21564342	IDA		ERROR	copper-responsive repressor CsoR	csoR|lmo1854	protein	taxon:393133	20110516	10403s_RastCyc
+10403s_RastCyc	LMRG_00137-MONOMER	positive transcription regulator		GO:0001151	PMID:20408910	IEP		F	positive transcription regulator	LMRG_00137|lmo0445	protein	taxon:393133	20110817	10403s_RastCyc
+10403s_RastCyc	LMRG_00137-MONOMER	positive transcription regulator		GO:0043620	PMID:20408910	IEP		P	positive transcription regulator	LMRG_00137|lmo0445	protein	taxon:393133	20110817	10403s_RastCyc
+10403s_RastCyc	LMRG_00137-MONOMER	positive transcription regulator		GO:0045893	PMID:20408910	IEP		P	positive transcription regulator	LMRG_00137|lmo0445	protein	taxon:393133	20110817	10403s_RastCyc
+10403s_RastCyc	LMRG_00137-MONOMER	positive transcription regulator		GO:2000144	PMID:20408910	IEP		P	positive transcription regulator	LMRG_00137|lmo0445	protein	taxon:393133	20110817	10403s_RastCyc
+10403s_RastCyc	LMRG_02909-MONOMER	Ami		GO:0009405	PMID:11251838	IMP		P	N-acetylmuramoyl-L-alanine amidase	ami|lmo2558	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_02909-MONOMER	Ami		GO:0044406	PMID:11251838	IMP		P	N-acetylmuramoyl-L-alanine amidase	ami|lmo2558	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_02909-MONOMER	Ami		GO:0005618	PMID:11251838	EXP		C	N-acetylmuramoyl-L-alanine amidase	ami|lmo2558	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_01780-MONOMER	ClpP		GO:0006508	PMID:10760131	EXP		P	ATP-dependent Clp protease proteolytic subunit	clpP|lmo2468	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_01780-MONOMER	ClpP		GO:0006950	PMID:10760131	EXP		P	ATP-dependent Clp protease proteolytic subunit	clpP|lmo2468	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_01780-MONOMER	ClpP		GO:0008233	PMID:10760131	EXP		F	ATP-dependent Clp protease proteolytic subunit	clpP|lmo2468	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_01780-MONOMER	ClpP		GO:0009368	PMID:10760131	EXP		C	ATP-dependent Clp protease proteolytic subunit	clpP|lmo2468	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_01780-MONOMER	ClpP		GO:0004252	PMID:10760131	EXP		F	ATP-dependent Clp protease proteolytic subunit	clpP|lmo2468	protein	taxon:393133	20110902	10403s_RastCyc
+10403s_RastCyc	LMRG_00240-MONOMER	Pgl		GO:0009405	PMID:19398547	IMP		P	6-phosphogluconolactonase	pgl|lmo0558	protein	taxon:393133	20121019	10403s_RastCyc
+10403s_RastCyc	LMRG_01332-MONOMER	Lap		GO:0009405	PMID:19454322	IMP		P	Alcohol acetaldehyde dehydrogenase	lap|lmo1634	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_01332-MONOMER	Lap		GO:0004022	PMID:20507888	EXP		F	Alcohol acetaldehyde dehydrogenase	lap|lmo1634	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_01332-MONOMER	Lap		GO:0008774	PMID:20507888	EXP		F	Alcohol acetaldehyde dehydrogenase	lap|lmo1634	protein	taxon:393133	20121022	10403s_RastCyc
+10403s_RastCyc	LMRG_02472-MONOMER	ArcA		GO:0016990	PMID:19196274	IMP		F	Arginine deiminase	arcA|lmo0043	protein	taxon:393133	20110815	10403s_RastCyc
+10403s_RastCyc	LMRG_02238-MONOMER	MurA		GO:0009405	PMID:14527997	IMP		P	Muramidase A	murA|lmo2691|namA	protein	taxon:393133	20121019	10403s_RastCyc
+10403s_RastCyc	LMRG_02238-MONOMER	MurA		GO:0001896	PMID:14617644	IMP		P	Muramidase A	murA|lmo2691|namA	protein	taxon:393133	20121019	10403s_RastCyc

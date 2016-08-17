@@ -1,0 +1,10 @@
+#field 7 DB:Reference errors: 0 errors
+
+#field 8 Evidence Code errors: 3 errors
+10403s_RastCyc	LMRG_02041-MONOMER	Dps		GO:0009275	PMID:20439472	ERROR		C	Non-specific DNA-binding protein Dps / Iron-binding ferritin-like antioxidant protein / Ferroxidase	fri|dps|flp|frl|frm	protein	taxon:393133		
+10403s_RastCyc	LMRG_02041-MONOMER	Dps		GO:0005737	PMID:20439472	ERROR		C	Non-specific DNA-binding protein Dps / Iron-binding ferritin-like antioxidant protein / Ferroxidase	fri|dps|flp|frl|frm	protein	taxon:393133		
+10403s_RastCyc	LMRG_01000-MONOMER	CopA		GO:0004008	PMID:21564342	ERROR		F	Copper-translocating P1-type ATPase	copA|lmo1853	protein	taxon:393133	20110517	10403s_RastCyc
+#field 9 With/From errors: 0 errors
+
+#field 15 no date/curator errors: 0 errors
+
