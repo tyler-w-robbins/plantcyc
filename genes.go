@@ -30,14 +30,17 @@ func ParseGenes(path string) []*Gene {
 	r := csv.NewReader(dat)
 	r.Comma = '\t'
 	r.Comment = '#'
+	r.LazyQuotes = true
 
 	for {
 		record, err := r.Read()
 		if err == io.EOF {
 			break
 		}
+
 		g := new(Gene)
 		value := 0
+
 		if record[0] == "UNIQUE-ID" {
 			value = 179
 		}
