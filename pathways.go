@@ -11,10 +11,11 @@ type Pathway struct {
 	Name     string
 	GeneName []string
 	GeneID   []string
+	Gene     []*Gene
 	Valid    bool
 }
 
-func ParsePathways(path string) []*Pathway {
+func ParsePathways(path string, gene []*Gene) []*Pathway {
 	Pathways := []*Pathway{}
 
 	dat, err := os.Open(path)
@@ -48,6 +49,9 @@ func ParsePathways(path string) []*Pathway {
 			for record[value] != "" && value < 91 {
 				p.GeneName = append(p.GeneName, record[value])
 				value++
+				// if p.GeneName == gene.ID {
+				// 	p.Gene = append(p.Gene, gene)
+				// }
 			}
 			value = 91
 			fallthrough
