@@ -25,72 +25,45 @@ func check(e error) {
 func main() {
 	location := "/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/"
 
-	node, err := os.Create("pCycNodeOut.csv")
+	geneNode, err := os.Create("pCycGeneNodeOut.csv")
+	check(err)
+	pathNode, err := os.Create("pCycPathNodeOut.csv")
 	check(err)
 	reln, err := os.Create("pCycRelnOut.csv")
 	check(err)
 
-	defer node.Close()
+	defer geneNode.Close()
+	defer pathNode.Close()
 	defer reln.Close()
 
-	wNode := bufio.NewWriter(node)
+	wGeneNode := bufio.NewWriter(geneNode)
+	wPathNode := bufio.NewWriter(pathNode)
 	// wReln := bufio.NewWriter(reln)
 
-	// Write header
-	_, err = wNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
+	// Write headers
+	_, err = geneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
+	check(err)
+	_, err = pathNode.WriteString("Source_ID:ID|Name|Source|:LABEL\n")
 	check(err)
 
-	// File iterating
+	// Iterate through files, parse different node types and write to files
 	err = filepath.Walk(location, func(path string, info os.FileInfo, err error) error {
 		if strings.HasSuffix(path, "genes.col") {
 			g = plantcyc.ParseGenes(path)
-			err = plantcyc.WriteGenes(path, wNode, g)
+			err = plantcyc.WriteGenes(path, wGeneNode, g)
 			check(err)
 		} else if strings.HasSuffix(path, "pathways.col") {
 			p = plantcyc.ParsePathways(path)
+			err = plantcyc.WritePathways(path, wPathNode, p)
+			check(err)
 		}
 		return nil
 	})
 	check(err)
 
-	// p = plantcyc.ParsePathways("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/pathways.col", g)
-	// for i := range p {
-	// 	fmt.Println(p[i])
-	// }
-	//
-	// e := enzymes.ParseEnzymes("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/enzymes.col")
-	//
-	// for i := range e {
-	// 	fmt.Println(e[i])
-	// }
-	//
-
-	// er := enzrxns.ParseEnzrxns("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/enzrxns.dat")
-	//
-	// for i := range er {
-	// 	fmt.Println(er[i])
-	// }
-	// pr := proteins.ParseProteins("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/proteins.dat")
-	//
-	// for i := range pr {
-	// 	fmt.Println(pr[i])
-	// }
-	// c := classes.ParseClasses("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/classes.dat")
-	// for i := range c {
-	// 	fmt.Println(c[i])
-	// }
-	// cp := compounds.ParseCompounds("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/compounds.dat")
-	//
-	// for i := range cp {
-	// 	fmt.Println(cp[i])
-	// }
-	// r := plantcyc.ParseReactions("/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/10403s_rastcyc/reactions.dat")
-	//
-	// for i := range r {
-	// 	fmt.Println(r[i])
-	// }
-
 	// Flush to ensure all buffered operations have been applied
-	err = wNode.Flush()
+	err = wGeneNode.Flush()
+	check(err)
+	err = wPathNode.Flush()
 	check(err)
 }

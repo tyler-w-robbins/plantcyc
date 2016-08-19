@@ -1,8 +1,8 @@
 package plantcyc
 
 import (
+	"bufio"
 	"encoding/csv"
-	"fmt"
 	"io"
 	"os"
 )
@@ -12,7 +12,6 @@ type Pathway struct {
 	Name     string
 	GeneName []string
 	GeneID   []string
-	Gene     []*Gene
 	Valid    bool
 }
 
@@ -22,6 +21,7 @@ func ParsePathways(path string) []*Pathway {
 	dat, err := os.Open(path)
 	check(err)
 
+	// Initialize csv reader
 	r := csv.NewReader(dat)
 	r.Comma = '\t'
 	r.Comment = '#'
@@ -36,6 +36,8 @@ func ParsePathways(path string) []*Pathway {
 		nameLoc := 0
 		idLoc := 0
 		value := 0
+
+		// Examine header and store locations of column names
 		if record[0] == "UNIQUE-ID" {
 			for i := range record {
 				if record[i] == "GENE-NAME" {
@@ -46,8 +48,9 @@ func ParsePathways(path string) []*Pathway {
 				}
 			}
 			value = len(record)
-			fmt.Println(value)
 		}
+
+		// Switch to iterate through each column in a record
 		switch value {
 		case 0:
 			p.ID = record[value]
@@ -57,14 +60,16 @@ func ParsePathways(path string) []*Pathway {
 			p.Name = record[value]
 			value++
 			fallthrough
+			// This case begins w
 		case 2:
 			for record[value] != "" && value <= nameLoc {
 				p.GeneName = append(p.GeneName, record[value])
 				value++
 			}
-			value = nameLoc
+			value = nameLoc + 1
 			fallthrough
-		case 91:
+			// Final case begins where the GENE-NAME columns end in file to be parsed
+		case nameLoc + 1:
 			for record[value] != "" && value <= idLoc {
 				p.GeneID = append(p.GeneID, record[value])
 				value++
@@ -75,4 +80,12 @@ func ParsePathways(path string) []*Pathway {
 
 	}
 	return Pathways
+}
+
+func WritePathways(path string, w *bufio.Writer, p []*Pathway) error {
+	for i := range p {
+		_, err := w.WriteString("PCYC:" + p[i].ID + "|" + p[i].Name + "|PlantCyc_Pathways|Pathway\n")
+		check(err)
+	}
+	return nil
 }

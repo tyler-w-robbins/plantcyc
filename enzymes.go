@@ -38,7 +38,6 @@ func ParseEnzymes(path string) []*Enzyme {
 		switch value {
 		case 0:
 			e.ID = record[value]
-			// fmt.Printf("	%v\n", record[value])
 			value++
 			fallthrough
 		case 1:
