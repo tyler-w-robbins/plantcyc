@@ -15,6 +15,7 @@ import (
 
 var g []*plantcyc.Gene
 var p []*plantcyc.Pathway
+var e []*plantcyc.Enzyme
 
 func check(e error) {
 	if e != nil {
@@ -55,6 +56,10 @@ func main() {
 		} else if strings.HasSuffix(path, "pathways.col") {
 			p = plantcyc.ParsePathways(path)
 			err = plantcyc.WritePathways(path, wPathNode, p)
+			check(err)
+		} else if strings.HasSuffix(path, "enzymes.col") {
+			e = plantcyc.ParseEnzymes(path)
+			err = plantcyc.WriteEnzymes(path, wPathNode, e)
 			check(err)
 		}
 		return nil

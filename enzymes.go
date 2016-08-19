@@ -1,6 +1,7 @@
 package plantcyc
 
 import (
+	"bufio"
 	"encoding/csv"
 	"io"
 	"os"
@@ -24,6 +25,7 @@ func ParseEnzymes(path string) []*Enzyme {
 	r := csv.NewReader(dat)
 	r.Comma = '\t'
 	r.Comment = '#'
+	r.LazyQuotes = true
 
 	for {
 		record, err := r.Read()
@@ -115,4 +117,12 @@ func ParseEnzymes(path string) []*Enzyme {
 		}
 	}
 	return Enzymes
+}
+
+func WriteEnzymes(path string, w *bufio.Writer, e []*Enzyme) error {
+	for i := range e {
+		_, err := w.WriteString("PCYC:" + e[i].ID + "|" + e[i].Name + "|PlantCyc_Pathways|Pathway\n")
+		check(err)
+	}
+	return nil
 }
