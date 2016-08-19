@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -23,30 +22,6 @@ func check(e error) {
 	}
 }
 
-func WriteGenes(path string, w *bufio.Writer) error {
-	// Parse gene nodes
-	g = plantcyc.ParseGenes(path)
-	for i := range g {
-		_, err := w.WriteString("PCYC:" + g[i].ID + "|" + g[i].Name)
-		check(err)
-		// Sometimes this field is blank
-		if g[i].SwissProtID != "" {
-			_, err = w.WriteString(";" + g[i].SwissProtID)
-			check(err)
-		}
-		// Synonyms are stored as a string array, so appends a string for each synonym
-		for _, syn := range g[i].Synonyms {
-			_, err := w.WriteString(";" + syn)
-			check(err)
-		}
-		_, err = w.WriteString("|" + g[i].Product + "|PlantCyc_Gene|Gene\n")
-		check(err)
-	}
-	err := w.Flush()
-	check(err)
-	return nil
-}
-
 func main() {
 	location := "/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/"
 
@@ -61,8 +36,6 @@ func main() {
 	wNode := bufio.NewWriter(node)
 	// wReln := bufio.NewWriter(reln)
 
-	// fmt.Println(reflect.TypeOf(wNode))
-
 	// Write header
 	_, err = wNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
 	check(err)
@@ -70,13 +43,12 @@ func main() {
 	// File iterating
 	err = filepath.Walk(location, func(path string, info os.FileInfo, err error) error {
 		if strings.HasSuffix(path, "genes.col") {
-			fmt.Println(path)
-			err = WriteGenes(path, wNode)
+			g = plantcyc.ParseGenes(path)
+			err = plantcyc.WriteGenes(path, wNode, g)
 			check(err)
+		} else if strings.HasSuffix(path, "pathways.col") {
+			p = plantcyc.ParsePathways(path)
 		}
-
-		err = wNode.Flush()
-		check(err)
 		return nil
 	})
 	check(err)

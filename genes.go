@@ -1,6 +1,7 @@
 package plantcyc
 
 import (
+	"bufio"
 	"encoding/csv"
 	"io"
 	"os"
@@ -82,4 +83,27 @@ func ParseGenes(path string) []*Gene {
 		}
 	}
 	return Genes
+}
+
+func WriteGenes(path string, w *bufio.Writer, g []*Gene) error {
+	// Parse gene nodes
+	for i := range g {
+		_, err := w.WriteString("PCYC:" + g[i].ID + "|" + g[i].Name)
+		check(err)
+		// Sometimes this field is blank
+		if g[i].SwissProtID != "" {
+			_, err = w.WriteString(";" + g[i].SwissProtID)
+			check(err)
+		}
+		// Synonyms are stored as a string array, so appends a string for each synonym
+		for _, syn := range g[i].Synonyms {
+			_, err := w.WriteString(";" + syn)
+			check(err)
+		}
+		_, err = w.WriteString("|" + g[i].Product + "|PlantCyc_Gene|Gene\n")
+		check(err)
+	}
+	err := w.Flush()
+	check(err)
+	return nil
 }

@@ -2,6 +2,7 @@ package plantcyc
 
 import (
 	"encoding/csv"
+	"fmt"
 	"io"
 	"os"
 )
@@ -15,7 +16,7 @@ type Pathway struct {
 	Valid    bool
 }
 
-func ParsePathways(path string, gene []*Gene) []*Pathway {
+func ParsePathways(path string) []*Pathway {
 	Pathways := []*Pathway{}
 
 	dat, err := os.Open(path)
@@ -24,6 +25,7 @@ func ParsePathways(path string, gene []*Gene) []*Pathway {
 	r := csv.NewReader(dat)
 	r.Comma = '\t'
 	r.Comment = '#'
+	r.LazyQuotes = true
 
 	for {
 		record, err := r.Read()
@@ -31,14 +33,24 @@ func ParsePathways(path string, gene []*Gene) []*Pathway {
 			break
 		}
 		p := new(Pathway)
+		nameLoc := 0
+		idLoc := 0
 		value := 0
 		if record[0] == "UNIQUE-ID" {
-			value = 179
+			for i := range record {
+				if record[i] == "GENE-NAME" {
+					nameLoc = i
+				}
+				if record[i] == "GENE-ID" {
+					idLoc = i
+				}
+			}
+			value = len(record)
+			fmt.Println(value)
 		}
 		switch value {
 		case 0:
 			p.ID = record[value]
-			// fmt.Printf("	%v\n", record[value])
 			value++
 			fallthrough
 		case 1:
@@ -46,17 +58,14 @@ func ParsePathways(path string, gene []*Gene) []*Pathway {
 			value++
 			fallthrough
 		case 2:
-			for record[value] != "" && value < 91 {
+			for record[value] != "" && value <= nameLoc {
 				p.GeneName = append(p.GeneName, record[value])
 				value++
-				// if p.GeneName == gene.ID {
-				// 	p.Gene = append(p.Gene, gene)
-				// }
 			}
-			value = 91
+			value = nameLoc
 			fallthrough
 		case 91:
-			for record[value] != "" && value < 179 {
+			for record[value] != "" && value <= idLoc {
 				p.GeneID = append(p.GeneID, record[value])
 				value++
 			}
