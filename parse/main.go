@@ -17,6 +17,7 @@ var g []*plantcyc.Gene
 var p []*plantcyc.Pathway
 var e []*plantcyc.Enzyme
 var c []*plantcyc.Compound
+var pr []*plantcyc.Protein
 
 func check(e error) {
 	if e != nil {
@@ -31,6 +32,8 @@ func main() {
 	check(err)
 	pathNode, err := os.Create("pCycPathNodeOut.csv")
 	check(err)
+	// protNode, err := os.Create("pCycProtNodeOut.csv")
+	// check(err)
 	reln, err := os.Create("pCycRelnOut.csv")
 	check(err)
 
@@ -40,6 +43,7 @@ func main() {
 
 	wGeneNode := bufio.NewWriter(geneNode)
 	wPathNode := bufio.NewWriter(pathNode)
+	// wProtNode := bufio.NewWriter(protNode)
 	// wReln := bufio.NewWriter(reln)
 
 	// Write headers
@@ -64,7 +68,11 @@ func main() {
 			check(err)
 		} else if strings.HasSuffix(path, "compounds.dat") {
 			c = plantcyc.ParseCompounds(path)
-			// err = plantcyc.WriteEnzymes(path, wPathNode, c)
+			// err = plantcyc.WriteCompounds(path, wPathNode, c)
+			check(err)
+		} else if strings.HasSuffix(path, "proteins.dat") {
+			pr = plantcyc.ParseProteins(path)
+			// err = plantcyc.WriteProteins(path, wProtNode, pr)
 			check(err)
 		}
 		return nil
