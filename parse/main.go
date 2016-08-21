@@ -16,6 +16,7 @@ import (
 var g []*plantcyc.Gene
 var p []*plantcyc.Pathway
 var e []*plantcyc.Enzyme
+var c []*plantcyc.Compound
 
 func check(e error) {
 	if e != nil {
@@ -24,7 +25,7 @@ func check(e error) {
 }
 
 func main() {
-	location := "/Users/trobbi11/plantcyc/tier1-tier2-flatfiles/"
+	location := "plantcyc/tier1-tier2-flatfiles/"
 
 	geneNode, err := os.Create("pCycGeneNodeOut.csv")
 	check(err)
@@ -60,6 +61,10 @@ func main() {
 		} else if strings.HasSuffix(path, "enzymes.col") {
 			e = plantcyc.ParseEnzymes(path)
 			err = plantcyc.WriteEnzymes(path, wPathNode, e)
+			check(err)
+		} else if strings.HasSuffix(path, "compounds.dat") {
+			c = plantcyc.ParseCompounds(path)
+			// err = plantcyc.WriteEnzymes(path, wPathNode, c)
 			check(err)
 		}
 		return nil
