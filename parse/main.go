@@ -34,6 +34,8 @@ func main() {
 	check(err)
 	pathNode, err := os.Create("pCycPathNodeOut.csv")
 	check(err)
+	chemNode, err := os.Create("pCycChemNodeOut.csv")
+	check(err)
 	// protNode, err := os.Create("pCycProtNodeOut.csv")
 	// check(err)
 	reln, err := os.Create("pCycRelnOut.csv")
@@ -41,10 +43,12 @@ func main() {
 
 	defer geneNode.Close()
 	defer pathNode.Close()
+	defer chemNode.Close()
 	defer reln.Close()
 
 	wGeneNode := bufio.NewWriter(geneNode)
 	wPathNode := bufio.NewWriter(pathNode)
+	wChemNode := bufio.NewWriter(chemNode)
 	// wProtNode := bufio.NewWriter(protNode)
 	// wReln := bufio.NewWriter(reln)
 
@@ -70,7 +74,7 @@ func main() {
 			check(err)
 		} else if strings.HasSuffix(path, "compounds.dat") {
 			c = plantcyc.ParseCompounds(path)
-			// err = plantcyc.WriteCompounds(path, wPathNode, c)
+			err = plantcyc.WriteCompounds(path, wPathNode, c)
 			check(err)
 		} else if strings.HasSuffix(path, "proteins.dat") {
 			pr = plantcyc.ParseProteins(path)
@@ -93,5 +97,7 @@ func main() {
 	err = wGeneNode.Flush()
 	check(err)
 	err = wPathNode.Flush()
+	check(err)
+	err = wChemNode.Flush()
 	check(err)
 }

@@ -55,3 +55,27 @@ func ParseCompounds(path string) []*Compound {
 	}
 	return Compounds
 }
+
+func WriteCompounds(path string, w *bufio.Writer, c []*Compound) error {
+	for i := range c {
+		_, err := w.WriteString("PCYC:" + c[i].ID + "|" + c[i].Name + "|PlantCyc_Chemicals|")
+		check(err)
+		for _, com := range c[i].Comment {
+			_, err = w.WriteString(strings.Replace(com, "|", "", -1))
+			check(err)
+		}
+		_, err = w.WriteString("|")
+		check(err)
+		for length, syn := range c[i].Synonyms {
+			if length > 0 {
+				_, err = w.WriteString(";")
+				check(err)
+			}
+			_, err = w.WriteString(strings.Replace(syn, "|", "", -1))
+			check(err)
+		}
+		_, err = w.WriteString("|Chemical\n")
+		check(err)
+	}
+	return nil
+}
