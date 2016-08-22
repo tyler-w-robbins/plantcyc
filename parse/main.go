@@ -18,6 +18,8 @@ var p []*plantcyc.Pathway
 var e []*plantcyc.Enzyme
 var c []*plantcyc.Compound
 var pr []*plantcyc.Protein
+var er []*plantcyc.Enzrxn
+var r []*plantcyc.Reaction
 
 func check(e error) {
 	if e != nil {
@@ -73,6 +75,14 @@ func main() {
 		} else if strings.HasSuffix(path, "proteins.dat") {
 			pr = plantcyc.ParseProteins(path)
 			// err = plantcyc.WriteProteins(path, wProtNode, pr)
+			check(err)
+		} else if strings.HasSuffix(path, "enzrxns.dat") {
+			er = plantcyc.ParseEnzrxns(path)
+			// err = plantcyc.WriteEnzrxns(path, wPathNode, er)
+			check(err)
+		} else if strings.HasSuffix(path, "reactions.dat") {
+			r = plantcyc.ParseReactions(path)
+			// err = plantcyc.WriteReactions(path, wPathNode, er)
 			check(err)
 		}
 		return nil
