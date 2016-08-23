@@ -49,6 +49,7 @@ func main() {
 	wGeneNode := bufio.NewWriter(geneNode)
 	wPathNode := bufio.NewWriter(pathNode)
 	wChemNode := bufio.NewWriter(chemNode)
+
 	// wProtNode := bufio.NewWriter(protNode)
 	// wReln := bufio.NewWriter(reln)
 
@@ -74,7 +75,7 @@ func main() {
 			check(err)
 		} else if strings.HasSuffix(path, "compounds.dat") {
 			c = plantcyc.ParseCompounds(path)
-			err = plantcyc.WriteCompounds(path, wPathNode, c)
+			err = plantcyc.WriteCompounds(path, wChemNode, c)
 			check(err)
 		} else if strings.HasSuffix(path, "proteins.dat") {
 			pr = plantcyc.ParseProteins(path)
