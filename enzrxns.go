@@ -51,7 +51,7 @@ func ParseEnzrxns(path string) []*Enzrxn {
 
 func WriteEnzrxns(path string, w *bufio.Writer, e []*Enzrxn) error {
 	for i := range e {
-		_, err := w.WriteString("PCYC:" + e[i].ID + "|" + e[i].Name + "|PlantCyc_Pathways|Pathway\n")
+		_, err := w.WriteString("PCYC:" + e[i].ID + "|" + e[i].Name + "|PlantCyc_Enzrxns|Pathway\n")
 		check(err)
 	}
 	return nil

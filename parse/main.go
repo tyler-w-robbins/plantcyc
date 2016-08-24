@@ -93,7 +93,7 @@ func main() {
 			check(err)
 		} else if strings.HasSuffix(path, "reactions.dat") {
 			r = plantcyc.ParseReactions(path)
-			// err = plantcyc.WriteReactions(path, wPathNode, er)
+			err = plantcyc.WriteReactions(path, wPathNode, r)
 			check(err)
 		}
 		return nil
