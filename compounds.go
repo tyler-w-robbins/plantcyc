@@ -61,7 +61,11 @@ func WriteCompounds(path string, w *bufio.Writer, c []*Compound) error {
 		_, err := w.WriteString("PCYC:" + c[i].ID + "|" + c[i].Name + "|PlantCyc_Chemicals|")
 		check(err)
 		for _, com := range c[i].Comment {
+<<<<<<< HEAD
 			_, err = w.WriteString(strings.Replace(com, "|", ";", -1))
+=======
+			_, err = w.WriteString(strings.Replace(com, "|", "", -1))
+>>>>>>> a4a76451de8bf8567250f638443a941552b27d33
 			check(err)
 		}
 		_, err = w.WriteString("|")
@@ -71,7 +75,11 @@ func WriteCompounds(path string, w *bufio.Writer, c []*Compound) error {
 				_, err = w.WriteString(";")
 				check(err)
 			}
+<<<<<<< HEAD
 			_, err = w.WriteString(strings.Replace(syn, "|", ";", -1))
+=======
+			_, err = w.WriteString(strings.Replace(syn, "|", "", -1))
+>>>>>>> a4a76451de8bf8567250f638443a941552b27d33
 			check(err)
 		}
 		_, err = w.WriteString("|Chemical\n")

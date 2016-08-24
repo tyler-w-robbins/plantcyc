@@ -36,21 +36,32 @@ func main() {
 	check(err)
 	chemNode, err := os.Create("pCycChemNodeOut.csv")
 	check(err)
+<<<<<<< HEAD
 	protNode, err := os.Create("pCycProtNodeOut.csv")
 	check(err)
+=======
+	// protNode, err := os.Create("pCycProtNodeOut.csv")
+	// check(err)
+>>>>>>> a4a76451de8bf8567250f638443a941552b27d33
 	reln, err := os.Create("pCycRelnOut.csv")
 	check(err)
 
 	defer geneNode.Close()
 	defer pathNode.Close()
 	defer chemNode.Close()
+<<<<<<< HEAD
 	defer protNode.Close()
+=======
+>>>>>>> a4a76451de8bf8567250f638443a941552b27d33
 	defer reln.Close()
 
 	wGeneNode := bufio.NewWriter(geneNode)
 	wPathNode := bufio.NewWriter(pathNode)
 	wChemNode := bufio.NewWriter(chemNode)
+<<<<<<< HEAD
 	wProtNode := bufio.NewWriter(protNode)
+=======
+>>>>>>> a4a76451de8bf8567250f638443a941552b27d33
 
 	// wProtNode := bufio.NewWriter(protNode)
 	// wReln := bufio.NewWriter(reln)
@@ -107,6 +118,9 @@ func main() {
 	check(err)
 	err = wChemNode.Flush()
 	check(err)
+<<<<<<< HEAD
 	err = wProtNode.Flush()
 	check(err)
+=======
+>>>>>>> a4a76451de8bf8567250f638443a941552b27d33
 }
