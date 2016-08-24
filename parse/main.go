@@ -34,17 +34,24 @@ func main() {
 	check(err)
 	pathNode, err := os.Create("pCycPathNodeOut.csv")
 	check(err)
-	// protNode, err := os.Create("pCycProtNodeOut.csv")
-	// check(err)
+	chemNode, err := os.Create("pCycChemNodeOut.csv")
+	check(err)
+	protNode, err := os.Create("pCycProtNodeOut.csv")
+	check(err)
 	reln, err := os.Create("pCycRelnOut.csv")
 	check(err)
 
 	defer geneNode.Close()
 	defer pathNode.Close()
+	defer chemNode.Close()
+	defer protNode.Close()
 	defer reln.Close()
 
 	wGeneNode := bufio.NewWriter(geneNode)
 	wPathNode := bufio.NewWriter(pathNode)
+	wChemNode := bufio.NewWriter(chemNode)
+	wProtNode := bufio.NewWriter(protNode)
+
 	// wProtNode := bufio.NewWriter(protNode)
 	// wReln := bufio.NewWriter(reln)
 
@@ -52,6 +59,10 @@ func main() {
 	_, err = geneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
 	check(err)
 	_, err = pathNode.WriteString("Source_ID:ID|Name|Source|:LABEL\n")
+	check(err)
+	_, err = pathNode.WriteString("Source_ID:ID|Name|Source|Definition|Synonyms:string[]|:LABEL\n")
+	check(err)
+	_, err = protNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
 	check(err)
 
 	// Iterate through files, parse different node types and write to files
@@ -70,11 +81,11 @@ func main() {
 			check(err)
 		} else if strings.HasSuffix(path, "compounds.dat") {
 			c = plantcyc.ParseCompounds(path)
-			// err = plantcyc.WriteCompounds(path, wPathNode, c)
+			err = plantcyc.WriteCompounds(path, wChemNode, c)
 			check(err)
 		} else if strings.HasSuffix(path, "proteins.dat") {
 			pr = plantcyc.ParseProteins(path)
-			// err = plantcyc.WriteProteins(path, wProtNode, pr)
+			err = plantcyc.WriteProteins(path, wProtNode, pr)
 			check(err)
 		} else if strings.HasSuffix(path, "enzrxns.dat") {
 			er = plantcyc.ParseEnzrxns(path)
@@ -93,5 +104,9 @@ func main() {
 	err = wGeneNode.Flush()
 	check(err)
 	err = wPathNode.Flush()
+	check(err)
+	err = wChemNode.Flush()
+	check(err)
+	err = wProtNode.Flush()
 	check(err)
 }

@@ -9,7 +9,7 @@ import (
 type Protein struct {
 	ID        string
 	Types     string
-	Name      []string
+	Name      string
 	Catalyzes []string
 	Gene      []string
 	Synonyms  []string
@@ -33,7 +33,7 @@ func ParseProteins(path string) []*Protein {
 			p.Types = strings.TrimPrefix(scanner.Text(), "TYPES - ")
 		}
 		if strings.HasPrefix(scanner.Text(), "COMMON-NAME") {
-			p.Name = append(p.Name, strings.TrimPrefix(scanner.Text(), "COMMON-NAME - "))
+			p.Name = strings.TrimPrefix(scanner.Text(), "COMMON-NAME - ")
 		}
 		if strings.HasPrefix(scanner.Text(), "CATALYZES") {
 			p.Catalyzes = append(p.Catalyzes, strings.TrimPrefix(scanner.Text(), "CATALYZES - "))
@@ -55,4 +55,25 @@ func ParseProteins(path string) []*Protein {
 		}
 	}
 	return Proteins
+}
+
+//Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL
+
+func WriteProteins(path string, w *bufio.Writer, p []*Protein) error {
+	for i := range p {
+		// ask Richard about matching Protein_Target data up with this, or editing to make standard Protein
+		_, err := w.WriteString("PCYC:" + p[i].ID + "|" + p[i].Name + "|PlantCyc_Proteins|||")
+		check(err)
+		for length, syn := range p[i].Synonyms {
+			if length > 0 {
+				_, err = w.WriteString(";")
+				check(err)
+			}
+			_, err = w.WriteString(strings.Replace(syn, "|", ";", -1))
+			check(err)
+		}
+		_, err = w.WriteString("|||Protein_Target\n")
+		check(err)
+	}
+	return nil
 }
