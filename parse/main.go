@@ -62,7 +62,7 @@ func main() {
 	check(err)
 	_, err = protNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
 	check(err)
-	_, err = reln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE")
+	_, err = reln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE\n")
 
 	// Iterate through files, parse different node types and write to files
 	err = filepath.Walk(location, func(path string, info os.FileInfo, err error) error {
