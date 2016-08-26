@@ -51,19 +51,18 @@ func main() {
 	wPathNode := bufio.NewWriter(pathNode)
 	wChemNode := bufio.NewWriter(chemNode)
 	wProtNode := bufio.NewWriter(protNode)
-
-	// wProtNode := bufio.NewWriter(protNode)
-	// wReln := bufio.NewWriter(reln)
+	wReln := bufio.NewWriter(reln)
 
 	// Write headers
 	_, err = geneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
 	check(err)
 	_, err = pathNode.WriteString("Source_ID:ID|Name|Source|:LABEL\n")
 	check(err)
-	_, err = pathNode.WriteString("Source_ID:ID|Name|Source|Definition|Synonyms:string[]|:LABEL\n")
+	_, err = chemNode.WriteString("Source_ID:ID|Name|Source|Definition|Synonyms:string[]|:LABEL\n")
 	check(err)
 	_, err = protNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
 	check(err)
+	_, err = reln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE")
 
 	// Iterate through files, parse different node types and write to files
 	err = filepath.Walk(location, func(path string, info os.FileInfo, err error) error {
@@ -98,7 +97,6 @@ func main() {
 		}
 		return nil
 	})
-	check(err)
 
 	// Flush to ensure all buffered operations have been applied
 	err = wGeneNode.Flush()
@@ -108,5 +106,7 @@ func main() {
 	err = wChemNode.Flush()
 	check(err)
 	err = wProtNode.Flush()
+	check(err)
+	err = wReln.Flush()
 	check(err)
 }
