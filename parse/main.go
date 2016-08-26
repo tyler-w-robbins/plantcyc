@@ -98,6 +98,8 @@ func main() {
 		return nil
 	})
 
+	plantcyc.WriteEnzymePaths(wReln, e, p)
+
 	// Flush to ensure all buffered operations have been applied
 	err = wGeneNode.Flush()
 	check(err)
