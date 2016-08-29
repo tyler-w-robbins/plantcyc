@@ -3,8 +3,10 @@ package plantcyc
 import (
 	"bufio"
 	"encoding/csv"
+	"fmt"
 	"io"
 	"os"
+	"strings"
 )
 
 type Gene struct {
@@ -19,6 +21,22 @@ type Gene struct {
 func check(e error) {
 	if e != nil {
 		panic(e)
+	}
+}
+
+func rmchars(str string, cut string) string {
+	if cut == "-" {
+		upd := strings.Replace(str, cut, "", -1)
+		return upd
+	} else if cut == "|" {
+		upd := strings.Replace(str, cut, " ", -1)
+		return upd
+	} else if cut == "_" {
+		upd := strings.Replace(str, cut, "", -1)
+		return upd
+	} else {
+		fmt.Println("error")
+		return str
 	}
 }
 
@@ -85,10 +103,10 @@ func ParseGenes(path string) []*Gene {
 	return Genes
 }
 
-func WriteGenes(path string, w *bufio.Writer, g []*Gene) error {
+func WriteGenes(w *bufio.Writer, g []*Gene) error {
 	// Parse gene nodes
 	for i := range g {
-		_, err := w.WriteString("PCYC:" + g[i].ID + "|" + g[i].Name)
+		_, err := w.WriteString("PCYC:" + rmchars(g[i].ID, "_") + "|" + rmchars(g[i].Name, "|"))
 		check(err)
 		// Sometimes this field is blank
 		if g[i].SwissProtID != "" {

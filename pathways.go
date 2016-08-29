@@ -82,9 +82,9 @@ func ParsePathways(path string) []*Pathway {
 	return Pathways
 }
 
-func WritePathways(path string, w *bufio.Writer, p []*Pathway) error {
+func WritePathways(w *bufio.Writer, p []*Pathway) error {
 	for i := range p {
-		_, err := w.WriteString("PCYC:" + p[i].ID + "|" + p[i].Name + "|PlantCyc_Pathways|Pathway\n")
+		_, err := w.WriteString("PCYC:" + rmchars(p[i].ID, "-") + "|" + rmchars(p[i].Name, "|") + "|PlantCyc_Pathways|Pathway\n")
 		check(err)
 	}
 	return nil

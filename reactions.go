@@ -65,9 +65,9 @@ func ParseReactions(path string) []*Reaction {
 	return Reactions
 }
 
-func WriteReactions(path string, w *bufio.Writer, r []*Reaction) error {
+func WriteReactions(w *bufio.Writer, r []*Reaction) error {
 	for i := range r {
-		_, err := w.WriteString("PCYC:" + r[i].ID + "|" + r[i].Name + "|PlantCyc_Reactions|Pathway\n")
+		_, err := w.WriteString("PCYC:" + rmchars(r[i].ID, "-") + "|" + rmchars(r[i].Name, "|") + "|PlantCyc_Reactions|Pathway\n")
 		check(err)
 	}
 	return nil

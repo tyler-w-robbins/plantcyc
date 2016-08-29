@@ -119,9 +119,9 @@ func ParseEnzymes(path string) []*Enzyme {
 	return Enzymes
 }
 
-func WriteEnzymes(path string, w *bufio.Writer, e []*Enzyme) error {
+func WriteEnzymes(w *bufio.Writer, e []*Enzyme) error {
 	for i := range e {
-		_, err := w.WriteString("PCYC:" + e[i].ID + "|" + e[i].Name + "|PlantCyc_Pathways|Pathway\n")
+		_, err := w.WriteString("PCYC:" + rmchars(e[i].ID, "-") + "|" + rmchars(e[i].Name, "|") + "|PlantCyc_Pathways|Pathway\n")
 		check(err)
 	}
 	return nil

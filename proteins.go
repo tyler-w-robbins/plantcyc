@@ -59,10 +59,10 @@ func ParseProteins(path string) []*Protein {
 
 //Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL
 
-func WriteProteins(path string, w *bufio.Writer, p []*Protein) error {
+func WriteProteins(w *bufio.Writer, p []*Protein) error {
 	for i := range p {
 		// ask Richard about matching Protein_Target data up with this, or editing to make standard Protein
-		_, err := w.WriteString("PCYC:" + p[i].ID + "|" + p[i].Name + "|PlantCyc_Proteins|||")
+		_, err := w.WriteString("PCYC:" + rmchars(p[i].ID, "-") + "|" + rmchars(p[i].Name, "|") + "|PlantCyc_Proteins|||")
 		check(err)
 		for length, syn := range p[i].Synonyms {
 			if length > 0 {

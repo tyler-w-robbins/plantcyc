@@ -63,37 +63,32 @@ func main() {
 	_, err = protNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
 	check(err)
 	_, err = reln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE\n")
+	check(err)
 
 	// Iterate through files, parse different node types and write to files
 	err = filepath.Walk(location, func(path string, info os.FileInfo, err error) error {
 		if strings.HasSuffix(path, "genes.col") {
 			g = plantcyc.ParseGenes(path)
-			err = plantcyc.WriteGenes(path, wGeneNode, g)
-			check(err)
+			plantcyc.WriteGenes(wGeneNode, g)
 		} else if strings.HasSuffix(path, "pathways.col") {
 			p = plantcyc.ParsePathways(path)
-			err = plantcyc.WritePathways(path, wPathNode, p)
-			check(err)
+			plantcyc.WritePathways(wPathNode, p)
 		} else if strings.HasSuffix(path, "enzymes.col") {
 			e = plantcyc.ParseEnzymes(path)
-			err = plantcyc.WriteEnzymes(path, wPathNode, e)
-			check(err)
+			plantcyc.WriteEnzymes(wPathNode, e)
 		} else if strings.HasSuffix(path, "compounds.dat") {
 			c = plantcyc.ParseCompounds(path)
-			err = plantcyc.WriteCompounds(path, wChemNode, c)
-			check(err)
+			plantcyc.WriteCompounds(wChemNode, c)
 		} else if strings.HasSuffix(path, "proteins.dat") {
 			pr = plantcyc.ParseProteins(path)
-			err = plantcyc.WriteProteins(path, wProtNode, pr)
-			check(err)
+			plantcyc.WriteProteins(wProtNode, pr)
 		} else if strings.HasSuffix(path, "enzrxns.dat") {
 			er = plantcyc.ParseEnzrxns(path)
-			err = plantcyc.WriteEnzrxns(path, wPathNode, er)
-			check(err)
+			plantcyc.WriteEnzrxns(wPathNode, er)
 		} else if strings.HasSuffix(path, "reactions.dat") {
 			r = plantcyc.ParseReactions(path)
-			err = plantcyc.WriteReactions(path, wPathNode, r)
-			check(err)
+			plantcyc.WriteReactions(wPathNode, r)
+
 		}
 		return nil
 	})
