@@ -3,7 +3,6 @@ package plantcyc
 import (
 	"bufio"
 	"encoding/csv"
-	"fmt"
 	"io"
 	"os"
 	"strings"
@@ -24,7 +23,7 @@ func check(e error) {
 	}
 }
 
-func rmchars(str string, cut string) string {
+func rmchars(str, cut string) string {
 	if cut == "-" {
 		upd := strings.Replace(str, cut, "", -1)
 		return upd
@@ -34,14 +33,17 @@ func rmchars(str string, cut string) string {
 	} else if cut == "_" {
 		upd := strings.Replace(str, cut, "", -1)
 		return upd
-	} else {
-		fmt.Println("error")
-		return str
 	}
+	return strings.Map(func(r rune) rune {
+		if strings.IndexRune(cut, r) < 0 {
+			return r
+		}
+		return -1
+	}, str)
+
 }
 
 func ParseGenes(path string, genes []*Gene) []*Gene {
-
 	dat, err := os.Open(path)
 	check(err)
 

@@ -54,15 +54,15 @@ func main() {
 	wReln := bufio.NewWriter(reln)
 
 	// Write headers
-	_, err = geneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
+	_, err = wGeneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
 	check(err)
-	_, err = pathNode.WriteString("Source_ID:ID|Name|Source|:LABEL\n")
+	_, err = wPathNode.WriteString("Source_ID:ID|Name|Source|:LABEL\n")
 	check(err)
-	_, err = chemNode.WriteString("Source_ID:ID|Name|Source|Definition|Synonyms:string[]|:LABEL\n")
+	_, err = wChemNode.WriteString("Source_ID:ID|Name|Source|Definition|Synonyms:string[]|:LABEL\n")
 	check(err)
-	_, err = protNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
+	_, err = wProtNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
 	check(err)
-	_, err = reln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE\n")
+	_, err = wReln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE\n")
 	check(err)
 
 	// Iterate through files, parse different node types and write to files
