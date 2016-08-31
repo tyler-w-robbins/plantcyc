@@ -68,32 +68,32 @@ func main() {
 	// Iterate through files, parse different node types and write to files
 	err = filepath.Walk(location, func(path string, info os.FileInfo, err error) error {
 		if strings.HasSuffix(path, "genes.col") {
-			g = plantcyc.ParseGenes(path)
+			g = plantcyc.ParseGenes(path, g)
 			plantcyc.WriteGenes(wGeneNode, g)
 		} else if strings.HasSuffix(path, "pathways.col") {
-			p = plantcyc.ParsePathways(path)
+			p = plantcyc.ParsePathways(path, p)
 			plantcyc.WritePathways(wPathNode, p)
 		} else if strings.HasSuffix(path, "enzymes.col") {
-			e = plantcyc.ParseEnzymes(path)
+			e = plantcyc.ParseEnzymes(path, e)
 			plantcyc.WriteEnzymes(wPathNode, e)
 		} else if strings.HasSuffix(path, "compounds.dat") {
-			c = plantcyc.ParseCompounds(path)
+			c = plantcyc.ParseCompounds(path, c)
 			plantcyc.WriteCompounds(wChemNode, c)
 		} else if strings.HasSuffix(path, "proteins.dat") {
-			pr = plantcyc.ParseProteins(path)
+			pr = plantcyc.ParseProteins(path, pr)
 			plantcyc.WriteProteins(wProtNode, pr)
 		} else if strings.HasSuffix(path, "enzrxns.dat") {
-			er = plantcyc.ParseEnzrxns(path)
+			er = plantcyc.ParseEnzrxns(path, er)
 			plantcyc.WriteEnzrxns(wPathNode, er)
 		} else if strings.HasSuffix(path, "reactions.dat") {
-			r = plantcyc.ParseReactions(path)
+			r = plantcyc.ParseReactions(path, r)
 			plantcyc.WriteReactions(wPathNode, r)
-
 		}
 		return nil
 	})
 
 	plantcyc.WriteEnzymePaths(wReln, e, p)
+	plantcyc.WritePathGenes(wReln, p, g)
 
 	// Flush to ensure all buffered operations have been applied
 	err = wGeneNode.Flush()

@@ -17,9 +17,7 @@ type Protein struct {
 	Citations string
 }
 
-func ParseProteins(path string) []*Protein {
-	Proteins := []*Protein{}
-
+func ParseProteins(path string, proteins []*Protein) []*Protein {
 	dat, err := os.Open(path)
 	check(err)
 	p := new(Protein)
@@ -51,10 +49,10 @@ func ParseProteins(path string) []*Protein {
 			p.Citations = strings.TrimPrefix(scanner.Text(), "CITATIONS - ")
 		}
 		if scanner.Text() == "//" {
-			Proteins = append(Proteins, p)
+			proteins = append(proteins, p)
 		}
 	}
-	return Proteins
+	return proteins
 }
 
 //Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL

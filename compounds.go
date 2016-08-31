@@ -16,9 +16,7 @@ type Compound struct {
 	SystemName string
 }
 
-func ParseCompounds(path string) []*Compound {
-	Compounds := []*Compound{}
-
+func ParseCompounds(path string, compounds []*Compound) []*Compound {
 	dat, err := os.Open(path)
 	check(err)
 	c := new(Compound)
@@ -50,10 +48,10 @@ func ParseCompounds(path string) []*Compound {
 			c.SystemName = strings.TrimPrefix(scanner.Text(), "SYSTEMATIC-NAME - ")
 		}
 		if scanner.Text() == "//" {
-			Compounds = append(Compounds, c)
+			compounds = append(compounds, c)
 		}
 	}
-	return Compounds
+	return compounds
 }
 
 func WriteCompounds(w *bufio.Writer, c []*Compound) error {

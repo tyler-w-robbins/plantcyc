@@ -19,9 +19,7 @@ type Reaction struct {
 	Synonyms  []string
 }
 
-func ParseReactions(path string) []*Reaction {
-	Reactions := []*Reaction{}
-
+func ParseReactions(path string, reactions []*Reaction) []*Reaction {
 	dat, err := os.Open(path)
 	check(err)
 	er := new(Reaction)
@@ -59,10 +57,10 @@ func ParseReactions(path string) []*Reaction {
 			er.Synonyms = append(er.Synonyms, strings.TrimPrefix(scanner.Text(), "SYNONYMS - "))
 		}
 		if scanner.Text() == "//" {
-			Reactions = append(Reactions, er)
+			reactions = append(reactions, er)
 		}
 	}
-	return Reactions
+	return reactions
 }
 
 func WriteReactions(w *bufio.Writer, r []*Reaction) error {

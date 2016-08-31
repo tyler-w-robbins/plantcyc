@@ -15,9 +15,7 @@ type Enzrxn struct {
 	Reaction  string
 }
 
-func ParseEnzrxns(path string) []*Enzrxn {
-	Enzrxns := []*Enzrxn{}
-
+func ParseEnzrxns(path string, enzrxns []*Enzrxn) []*Enzrxn {
 	dat, err := os.Open(path)
 	check(err)
 	er := new(Enzrxn)
@@ -43,10 +41,10 @@ func ParseEnzrxns(path string) []*Enzrxn {
 			er.Reaction = strings.TrimPrefix(scanner.Text(), "REACTION - ")
 		}
 		if scanner.Text() == "//" {
-			Enzrxns = append(Enzrxns, er)
+			enzrxns = append(enzrxns, er)
 		}
 	}
-	return Enzrxns
+	return enzrxns
 }
 
 func WriteEnzrxns(w *bufio.Writer, e []*Enzrxn) error {

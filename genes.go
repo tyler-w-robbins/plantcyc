@@ -40,8 +40,7 @@ func rmchars(str string, cut string) string {
 	}
 }
 
-func ParseGenes(path string) []*Gene {
-	Genes := []*Gene{}
+func ParseGenes(path string, genes []*Gene) []*Gene {
 
 	dat, err := os.Open(path)
 	check(err)
@@ -97,10 +96,10 @@ func ParseGenes(path string) []*Gene {
 				}
 			}
 			g.Valid = true
-			Genes = append(Genes, g)
+			genes = append(genes, g)
 		}
 	}
-	return Genes
+	return genes
 }
 
 func WriteGenes(w *bufio.Writer, g []*Gene) error {

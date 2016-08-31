@@ -15,8 +15,8 @@ type Pathway struct {
 	Valid    bool
 }
 
-func ParsePathways(path string) []*Pathway {
-	Pathways := []*Pathway{}
+func ParsePathways(path string, pathways []*Pathway) []*Pathway {
+	// Pathways := []*Pathway{}
 
 	dat, err := os.Open(path)
 	check(err)
@@ -27,21 +27,24 @@ func ParsePathways(path string) []*Pathway {
 	r.Comment = '#'
 	r.LazyQuotes = true
 
+	nameLoc := 0
+	idLoc := 0
+
 	for {
 		record, err := r.Read()
 		if err == io.EOF {
 			break
 		}
 		p := new(Pathway)
-		nameLoc := 0
-		idLoc := 0
 		value := 0
-
 		// Examine header and store locations of column names
 		if record[0] == "UNIQUE-ID" {
 			for i := range record {
 				if record[i] == "GENE-NAME" {
+					// fmt.Println("gene name")
+					// fmt.Println(i)
 					nameLoc = i
+					// fmt.Println(nameLoc)
 				}
 				if record[i] == "GENE-ID" {
 					idLoc = i
@@ -49,6 +52,7 @@ func ParsePathways(path string) []*Pathway {
 			}
 			value = len(record)
 		}
+		// fmt.Println(nameLoc)
 
 		// Switch to iterate through each column in a record
 		switch value {
@@ -67,19 +71,22 @@ func ParsePathways(path string) []*Pathway {
 				value++
 			}
 			value = nameLoc + 1
+			// fmt.Println(value)
+			// fmt.Println(nameLoc)
 			fallthrough
 			// Final case begins where the GENE-NAME columns end in file to be parsed
 		case nameLoc + 1:
-			for record[value] != "" && value <= idLoc {
+			for record[value] != "" && value < idLoc {
 				p.GeneID = append(p.GeneID, record[value])
+				// fmt.Println(record[value])
 				value++
 			}
 			p.Valid = true
-			Pathways = append(Pathways, p)
+			pathways = append(pathways, p)
 		}
 
 	}
-	return Pathways
+	return pathways
 }
 
 func WritePathways(w *bufio.Writer, p []*Pathway) error {

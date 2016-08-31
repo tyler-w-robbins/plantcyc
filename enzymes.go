@@ -16,9 +16,7 @@ type Enzyme struct {
 	Valid bool
 }
 
-func ParseEnzymes(path string) []*Enzyme {
-	Enzymes := []*Enzyme{}
-
+func ParseEnzymes(path string, enzymes []*Enzyme) []*Enzyme {
 	dat, err := os.Open(path)
 	check(err)
 
@@ -113,10 +111,10 @@ func ParseEnzymes(path string) []*Enzyme {
 				}
 			}
 			e.Valid = true
-			Enzymes = append(Enzymes, e)
+			enzymes = append(enzymes, e)
 		}
 	}
-	return Enzymes
+	return enzymes
 }
 
 func WriteEnzymes(w *bufio.Writer, e []*Enzyme) error {
