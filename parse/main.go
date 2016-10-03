@@ -94,6 +94,7 @@ func main() {
 
 	plantcyc.WriteEnzymePaths(wReln, e, p)
 	plantcyc.WritePathGenes(wReln, p, g)
+	plantcyc.WriteProteinEnzrxns(wReln, pr, er)
 
 	// Flush to ensure all buffered operations have been applied
 	err = wGeneNode.Flush()
