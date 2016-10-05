@@ -35,8 +35,9 @@ func ParseCompounds(path string, compounds []*Compound) []*Compound {
 		if strings.HasPrefix(scanner.Text(), "/") && !strings.HasPrefix(scanner.Text(), "//") {
 			c.Comment = append(c.Comment, strings.TrimPrefix(scanner.Text(), "/"))
 		}
-		if strings.HasPrefix(scanner.Text(), "DBLINKS") {
-			c.DBLinks = append(c.DBLinks, strings.TrimPrefix(scanner.Text(), "DBLINKS - "))
+		if strings.HasPrefix(scanner.Text(), "DBLINKS - (CHEBI") {
+			chebi := strings.Split(strings.TrimPrefix(scanner.Text(), "DBLINKS - (CHEBI \""), "\"")[0]
+			c.DBLinks = append(c.DBLinks, chebi)
 		}
 		if strings.HasPrefix(scanner.Text(), "SYNONYMS") {
 			c.Synonyms = append(c.Synonyms, strings.TrimPrefix(scanner.Text(), "SYNONYMS - "))

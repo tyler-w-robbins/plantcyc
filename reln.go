@@ -1,6 +1,9 @@
 package plantcyc
 
-import "bufio"
+import (
+	"bufio"
+	"fmt"
+)
 
 func WriteEnzymePaths(w *bufio.Writer, e []*Enzyme, p []*Pathway) {
 	for j := range p {
@@ -40,6 +43,16 @@ func WriteProteinEnzrxns(w *bufio.Writer, pr []*Protein, er []*Enzrxn) {
 					check(err)
 				}
 			}
+		}
+	}
+}
+
+func WriteCompoundChebi(w *bufio.Writer, c []*Compound) {
+	for i := range c {
+		for j := range c[i].DBLinks {
+			fmt.Println("halp")
+			_, err := w.WriteString("PCYC:" + rmchars(c[i].ID, "*_-") + "|Chemicals|CHEBI:" + c[i].DBLinks[j] + "|is_a\n")
+			check(err)
 		}
 	}
 }
