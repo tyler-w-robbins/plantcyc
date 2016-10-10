@@ -1,16 +1,13 @@
 package plantcyc
 
-import (
-	"bufio"
-	"fmt"
-)
+import "bufio"
 
 func WriteEnzymePaths(w *bufio.Writer, e []*Enzyme, p []*Pathway) {
 	for j := range p {
 		for i := range e {
 			for k := range e[i].Path {
 				if e[i].Path[k] == p[j].ID {
-					_, err := w.WriteString("PCYC:" + rmchars(e[i].ID, "*_-") + "|Chemicals|PCYC:" + rmchars(p[j].ID, "*_-") + "|is_part_of\n")
+					_, err := w.WriteString("PCYC:" + rmchars(e[i].ID, "*_-") + "|PlantCyc_Chemicals|PCYC:" + rmchars(p[j].ID, "*_-") + "|is_part_of\n")
 					check(err)
 				}
 			}
@@ -50,7 +47,6 @@ func WriteProteinEnzrxns(w *bufio.Writer, pr []*Protein, er []*Enzrxn) {
 func WriteCompoundChebi(w *bufio.Writer, c []*Compound) {
 	for i := range c {
 		for j := range c[i].DBLinks {
-			fmt.Println("halp")
 			_, err := w.WriteString("PCYC:" + rmchars(c[i].ID, "*_-") + "|Chemicals|CHEBI:" + c[i].DBLinks[j] + "|is_a\n")
 			check(err)
 		}

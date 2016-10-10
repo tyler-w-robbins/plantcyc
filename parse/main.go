@@ -54,7 +54,7 @@ func main() {
 	wReln := bufio.NewWriter(reln)
 
 	// Write headers
-	_, err = wGeneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:Label\n")
+	_, err = wGeneNode.WriteString("GeneID:ID|Synonyms:String[]|Description|Source|:LABEL\n")
 	check(err)
 	_, err = wPathNode.WriteString("Source_ID:ID|Name|Source|:LABEL\n")
 	check(err)
@@ -62,7 +62,7 @@ func main() {
 	check(err)
 	_, err = wProtNode.WriteString("Source_ID:ID|Name|Source|Function|Diseases|Synonyms:string[]|KEGG_Pathway|Wiki_Pathway|:LABEL\n")
 	check(err)
-	_, err = wReln.WriteString(":START_ID|Source|:END_ID|Category|:TYPE\n")
+	_, err = wReln.WriteString(":START_ID|Source|:END_ID|:TYPE\n")
 	check(err)
 
 	// Iterate through files, parse different node types and write to files
@@ -91,10 +91,11 @@ func main() {
 		}
 		return nil
 	})
-
-	plantcyc.WriteEnzymePaths(wReln, e, p)
-	plantcyc.WritePathGenes(wReln, p, g)
-	plantcyc.WriteProteinEnzrxns(wReln, pr, er)
+	//
+	// plantcyc.WriteEnzymePaths(wReln, e, p)
+	// plantcyc.WritePathGenes(wReln, p, g)
+	// plantcyc.WriteProteinEnzrxns(wReln, pr, er)
+	// plantcyc.WriteCompoundChebi(wReln, c)
 
 	// Flush to ensure all buffered operations have been applied
 	err = wGeneNode.Flush()

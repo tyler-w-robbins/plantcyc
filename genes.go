@@ -119,7 +119,7 @@ func WriteGenes(w *bufio.Writer, g []*Gene) error {
 			_, err := w.WriteString(";" + syn)
 			check(err)
 		}
-		_, err = w.WriteString("|" + g[i].Product + "|PlantCyc_Gene|Gene\n")
+		_, err = w.WriteString("|\"" + g[i].Product + "\"|PlantCyc_Gene|Gene\n")
 		check(err)
 	}
 	err := w.Flush()
